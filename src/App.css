@@ -34,6 +34,7 @@
 :root {
   --bg-color: #f8f8f8;
   --txt-color: #000;
+  --icon-color: #000;
 }
 
 *,
@@ -44,7 +45,7 @@ html {
   scrollbar-width: none;
   font-family: Sora-Regular;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
@@ -60,8 +61,51 @@ html {
   background-color: var(--bg-color);
 }
 
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  height: 100%;
+  margin: 0px auto;
+}
+
 .store-header {
   display: flex;
+  /* border: 1px solid red; */
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  min-height: 40px;
+}
+
+.navtabs-ctn {
+  background-color: #f1f3f4;
+  border-radius: 10px;
+}
+
+.navtabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* border: 1px solid red; */
+}
+
+.navtabs > li {
+  margin: 6px 15px;
+}
+
+.navtabs-btn {
+  transition: transform 450ms;
+  will-change: transform;
+}
+
+.navtabs-btn:hover {
+  transition: transform 125ms;
+  transform: translateY(-5px) scale(1.2);
 }
 
 .App {
