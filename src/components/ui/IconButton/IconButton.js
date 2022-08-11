@@ -1,7 +1,7 @@
 import React from "react";
 import "./IconButton.css";
 
-export const IconButton = ({ name, style, className }) => {
+function IconButton({ name, style, className }) {
   return (
     <button
       className={`material-symbols-outlined icon-btn ${className}`}
@@ -10,4 +10,6 @@ export const IconButton = ({ name, style, className }) => {
       {name}
     </button>
   );
-};
+}
+
+export default IconButton;
