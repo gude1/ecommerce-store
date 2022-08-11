@@ -32,7 +32,7 @@
 }
 
 :root {
-  --bg-color: hsla(0, 0%, 96.5%, 0.6);
+  --bg-color: #e9ecef;
   --bg-white: #fff;
   --icon-color: #000;
   --text-gray: #777777;

@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="container">
       {/* Headers*/}
-      <header className="store-header">
+      <header className="store-header animate__animated  animate__slideInDown">
         <nav className="store-header-cnt">
           <h2 className="store-name">My Store</h2>
           <nav className="navtabs-ctn">
