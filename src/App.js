@@ -1,24 +1,6 @@
 import "./App.css";
+import Product from "./components/Product/Product";
 import IconButton from "./components/ui/IconButton/IconButton";
-
-const Product = ({ style, className, src }) => {
-  return (
-    <div className={`product-ctn ${className || ""}`}>
-      <img
-        // src="https://react.pixelstrap.com/multikart-admin/static/media/001.2822b78e.jpg"
-        src={
-          src ||
-          "https://react.pixelstrap.com/multikart-admin/static/media/1.a7d938d0.jpg"
-        }
-        className="product-img"
-      />
-      <div className="productdesc-ctn">
-        <span className="product-name">Slim Fit cotton shirt</span>
-        <span className="product-amount">N4000</span>
-      </div>
-    </div>
-  );
-};
 
 function App() {
   return (
@@ -44,26 +26,34 @@ function App() {
       <div className="scroll-vertical">
         <div className="container">
           <main className="page-ctn  slideInUp">
+            <header className="category-header">
+              <div className="productdesc-ctn">
+                <h3>Products for sale</h3>
+              </div>
+            </header>
             <div className="productlist-ctn">
               <Product
+                className={"product"}
                 src={
                   "https://media.istockphoto.com/id/517188688/photo/mountain-landscape.webp?s=612x612&w=is&k=20&c=M-zkBx55YCn_UZg9cyuVMm1nS_PhSKGqoVybgO1Dp0Y="
                 }
               />
               <Product
+                className={"product"}
                 src={
                   "https://media.istockphoto.com/id/1174472274/photo/connection-with-nature.webp?s=612x612&w=is&k=20&c=w1X2_iZd6p2vThXzYABvIMxwjJ9_kHoasLGxmff-xBM="
                 }
               />
               <Product
+                className={"product"}
                 src={
                   "https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.webp?s=612x612&w=is&k=20&c=WZZoms0dBlmanqXPkG61DA8js67F7rLZ8CA33ymxxj4="
                 }
               />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
+              <Product className={"product"} />
+              <Product className={"product"} />
+              <Product className={"product"} />
+              <Product className={"product"} />
             </div>
           </main>
         </div>

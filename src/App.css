@@ -102,13 +102,6 @@ li {
   align-items: center;
 }
 
-.container {
-  width: 85%;
-  will-change: scroll-position;
-  margin: 0px auto;
-  margin-top: 10px;
-}
-
 .navtabs-ctn {
   background-color: var(--bg-gray);
   border-radius: 10px;
@@ -135,22 +128,29 @@ li {
   transform: translateY(-5px) scale(1.2);
 }
 
+.container {
+  width: 85%;
+  will-change: scroll-position;
+  margin: 0px auto;
+  margin-top: 10px;
+}
+
 .category-header {
   display: flex;
-  justify-content: center;
-  /* border-top: 1px solid black; */
-  /* border-bottom: 1px solid black; */
-  width: 70%;
-  margin: auto;
+  justify-content: space-between;
+  /* border: 1px solid purple; */
   align-items: center;
-  /* border: 1px solid blue; */
-  margin-top: 20px;
+  margin: 20px 0;
   height: 40px;
 }
 
 .category-header > h3 {
   font-family: Sora-Medium;
   font-weight: bolder;
+}
+
+.productdesc-ctn > h3 {
+  text-transform: uppercase;
 }
 
 .page-ctn {
@@ -162,55 +162,13 @@ li {
   /* border: 1px solid red; */
   align-content: center;
   justify-content: space-between;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
 }
 
-.productlist-ctn > div {
-  width: auto;
+.product {
+  width: auto !important;
   /* height: auto; */
-}
-
-.product-ctn {
-  width: 220px;
-  min-height: 220px;
-  border-radius: 10px;
-  padding: 25px;
-  /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); */
-  /* border: 1px solid red; */
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-}
-
-.product-img {
-  width: 100%;
-  /* border: 1px solid red; */
-  /* min-height: 150px;
-  max-height: 450px; */
-  object-fit: cover;
-  object-position: center;
-  height: 270px;
-}
-
-.productdesc-ctn {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 20px;
-  /* border: 1px solid lightgray; */
-}
-
-.product-name {
-  font-family: Sora-Medium;
-  margin-top: 8px;
-  color: var(--text-gray);
-}
-
-.product-amount {
-  font-weight: bold;
-  margin-top: 8px;
 }
 
 /* Animation classes */
@@ -262,10 +220,6 @@ li {
     width: 90%;
   }
   .productlist-ctn {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-
-  .product-img {
-    height: 320px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
