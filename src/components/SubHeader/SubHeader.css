@@ -1,0 +1,17 @@
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid purple; */
+  align-items: center;
+  margin: 20px 0;
+  height: 40px;
+}
+
+.category-header > h3 {
+  font-family: Sora-Medium;
+  font-weight: bolder;
+}
+
+.productdesc-ctn > h3 {
+  text-transform: uppercase;
+}
