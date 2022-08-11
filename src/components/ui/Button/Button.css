@@ -1,0 +1,34 @@
+.custombtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  min-height: 30px;
+  font-size: 12px;
+  border-radius: 5px;
+  color: white;
+  background: #4764e6;
+  padding: 12px;
+  outline: none;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.custombtn:focus {
+  outline: none !important;
+}
+
+.custombtn:disabled,
+.custombtn:hover {
+  background: transparent;
+  border: 1px solid #3e3e3e;
+  color: #3e3e3e;
+}
