@@ -1,11 +1,12 @@
 import React from "react";
+import "../../App.css";
 import "./SubHeader.css";
 
 export default function SubHeader() {
   return (
-    <header className="category-header">
+    <header className="category-header slideInRight">
       <div className="productdesc-ctn">
-        <h3>Products for sale</h3>
+        <h3>Product List</h3>
       </div>
     </header>
   );

@@ -34,6 +34,7 @@
 :root {
   --bg-color: #e9ecef;
   --bg-white: #fff;
+  --blue: #4764e6;
   --icon-color: #000;
   --text-gray: #777777;
   --bg-gray: #f1f3f4;
@@ -93,22 +94,28 @@ li {
   margin-top: 10px;
 }
 
-.productlist-ctn {
-  display: grid;
-  /* border: 1px solid red; */
-  align-content: center;
-  justify-content: space-between;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+.flex-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.product {
-  width: auto !important;
-  /* height: auto; */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.loader-ctn {
+  color: var(--blue) !important;
+  display: flex;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Animation classes */
-
 .slideInUp {
   animation: slideInUp 1s;
   -webkit-animation: slideInUp 1s;
@@ -120,8 +127,13 @@ li {
 }
 
 .slideInLeft {
-  animation: slideInLeft 1s;
-  -webkit-animation: slideInLeft 1s;
+  animation: slideInleft 1s;
+  -webkit-animation: slideInleft 1s;
+}
+
+.slideInRight {
+  animation: slideInRight 1s;
+  -webkit-animation: slideInRight 1s;
 }
 
 @media (prefers-reduced-motion: no-preference) {

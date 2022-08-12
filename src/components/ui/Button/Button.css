@@ -7,10 +7,10 @@
   font-size: 12px;
   border-radius: 5px;
   color: white;
-  background: #4764e6;
+  background: var(--blue);
   padding: 12px;
   outline: none;
-  transition: all 0.5s;
+  transition: all 1s;
   border: none;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -28,6 +28,7 @@
 
 .custombtn:disabled,
 .custombtn:hover {
+  transition: all 0.5s;
   background: transparent;
   border: 1px solid #3e3e3e;
   color: #3e3e3e;

@@ -40,6 +40,12 @@
   margin-top: 8px;
 }
 
+.product-actionbtn {
+  align-self: center;
+  font-family: Sora-Medium !important;
+  margin-top: 12px;
+}
+
 @media (max-width: 639px) {
   .product-img {
     height: 330px;

@@ -1,0 +1,13 @@
+.productlist-ctn {
+  display: grid;
+  /* border: 1px solid red; */
+  align-content: center;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.product {
+  width: auto !important;
+  /* height: auto; */
+}
