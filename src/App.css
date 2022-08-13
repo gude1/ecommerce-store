@@ -36,6 +36,7 @@
   --bg-white: #fff;
   --blue: #4764e6;
   --icon-color: #000;
+  --black: #000;
   --text-gray: #777777;
   --bg-gray: #f1f3f4;
   height: 100%;
@@ -78,6 +79,7 @@ html {
 .scroll-vertical {
   overflow-y: auto;
   height: 100%;
+  /* border: 1px solid red; */
   padding-bottom: 80px;
 }
 
@@ -89,7 +91,9 @@ li {
 
 .container {
   width: 85%;
+  /* border: 1px solid red; */
   will-change: scroll-position;
+  padding: 0;
   margin: 0px auto;
   margin-top: 10px;
 }
@@ -157,13 +161,15 @@ li {
 
 /* 'md': {'max': '912px'}, */
 @media (max-width: 912px) {
+  .scroll-vertical::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @media (min-width: 912px) {
 }
 
 @media (max-width: 639px) {
-  .store-header-cnt,
   .container {
     width: 90%;
   }

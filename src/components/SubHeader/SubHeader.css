@@ -1,6 +1,6 @@
 .category-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   /* border: 1px solid purple; */
   align-items: center;
   margin: 20px 0;
@@ -14,4 +14,21 @@
 
 .productdesc-ctn > h3 {
   text-transform: uppercase;
+}
+
+.category-select-control {
+  /* border: 1px solid indigo; */
+  padding: 2px 5px;
+  cursor: pointer;
+  width: 180px;
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  background-color: var(--bg-white);
+}
+
+.category-select-arrow {
+  color: var(--black);
 }
