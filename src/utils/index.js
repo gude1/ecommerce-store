@@ -1,5 +1,5 @@
-import { toast } from "react-toastify";
-import { REACT_TOAST_SUCCESS_OPTIONS } from "../constants";
+// import { toast } from "react-toastify";
+// import { REACT_TOAST_SUCCESS_OPTIONS } from "../constants";
 
 export function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
@@ -22,6 +22,18 @@ export function combineReducers(reducers) {
         });
 
   return [state, dispatch];
+}
+
+export function relativePath() {
+  return window.location.pathname.replaceAll("/", "");
+}
+
+//function to determine if data has valid values
+export function checkData(data) {
+  if ((data != null && data != undefined && data != "") || data == "0") {
+    return true;
+  }
+  return false;
 }
 
 export const isEmpty = (data) => {
@@ -120,12 +132,12 @@ export function checkUrl(pathname, navigate) {
   let access = getCookie("id1");
   let refresh = getCookie("id2");
   if ((!access || !refresh) && pathname != "/") {
-    toast("Please login in to access this page", {
-      ...REACT_TOAST_SUCCESS_OPTIONS,
-      toastId: "notloginedurltoast",
-      autoClose: 500,
-      type: toast.TYPE.INFO,
-    });
+    // toast("Please login in to access this page", {
+    //   ...REACT_TOAST_SUCCESS_OPTIONS,
+    //   toastId: "notloginedurltoast",
+    //   autoClose: 500,
+    //   type: toast.TYPE.INFO,
+    // });
     navigate("/", { replace: true });
     // window.location.replace("/");
   }

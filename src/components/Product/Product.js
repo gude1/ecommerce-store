@@ -6,7 +6,7 @@ const Product = ({
   className,
   src,
   buttonStyle = {},
-  buttonTtitle = "View Details",
+  buttonTitle = "View Details",
   onBtnClick = null,
 }) => {
   return (
@@ -25,7 +25,7 @@ const Product = ({
       </div>
       <Button
         className="product-actionbtn"
-        title="View Details"
+        title={buttonTitle}
         style={buttonStyle}
         buttonProps={{
           onClick: onBtnClick,

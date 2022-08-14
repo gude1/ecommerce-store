@@ -4,29 +4,31 @@ import "react-dropdown/style.css";
 import "../../App.css";
 import "./SubHeader.css";
 
-export default function SubHeader() {
+export default function SubHeader({ title = "SubHeader Title", show = false }) {
   const options = ["All", "Electronics", "Bags"];
   return (
     <header className="category-header slideInRight">
       <div className="productdesc-ctn">
-        <h3>Product List</h3>
+        <h4>{title}</h4>
       </div>
       <div>
-        <Dropdown
-          options={options}
-          placeholder="Product Category"
-          controlClassName="category-select-control"
-          arrowOpen={
-            <span className="material-symbols-outlined category-select-arrow">
-              arrow_drop_up
-            </span>
-          }
-          arrowClosed={
-            <span class="material-symbols-outlined category-select-arrow">
-              arrow_drop_down
-            </span>
-          }
-        />
+        {show && (
+          <Dropdown
+            options={options}
+            placeholder="Product Category"
+            controlClassName="category-select-control"
+            arrowOpen={
+              <span className="material-symbols-outlined category-select-arrow">
+                arrow_drop_up
+              </span>
+            }
+            arrowClosed={
+              <span className="material-symbols-outlined category-select-arrow">
+                arrow_drop_down
+              </span>
+            }
+          />
+        )}
       </div>
     </header>
   );

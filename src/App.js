@@ -5,6 +5,7 @@ import { BrowserRouter, Outlet, Routes, Route } from "react-router-dom";
 import MainHeader from "./components/MainHeader/MainHeader";
 import SubHeader from "./components/SubHeader/SubHeader";
 import Home from "./pages/Home/Home";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
 
 function Wrapper() {
   return (
@@ -12,7 +13,6 @@ function Wrapper() {
       <MainHeader />
       <div className="scroll-vertical">
         <main className="container">
-          <SubHeader />
           <Outlet />
         </main>
       </div>
@@ -26,6 +26,7 @@ function App() {
       <Routes>
         <Route path="/:storeId" element={<Wrapper />}>
           <Route index element={<Home />} />
+          <Route path="product/:productId" element={<ProductDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>
