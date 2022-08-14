@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { relativePath } from "../../utils";
 import IconButton from "../ui/IconButton/IconButton";
 import "./MainHeader.css";
 
@@ -13,7 +14,8 @@ export default function MainHeader({}) {
         {location?.state?.goback && (
           <IconButton
             name={"west"}
-            style={{ fontWeight: "bold" }}
+            className="arrow-nav-btn"
+            style={{ fontWeight: "bold", margin: 0 }}
             onClick={() => navigate(-1)}
           />
         )}
@@ -22,7 +24,11 @@ export default function MainHeader({}) {
         <nav className="navtabs-ctn">
           <ul className="navtabs">
             <li>
-              <IconButton name={"Home"} className="navtabs-btn" />
+              <IconButton
+                name={"Home"}
+                className="navtabs-btn"
+                onClick={() => navigate(`/1324424`, { replace: true })}
+              />
             </li>
             <li>
               <IconButton name={"search"} className="navtabs-btn" />

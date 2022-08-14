@@ -6,6 +6,11 @@
   box-shadow: 1px 5px 24px 0 rgb(68 102 242 / 5%);
 }
 
+.arrow-nav-btn {
+  font-weight: bold;
+  font-size: 32px;
+}
+
 .store-header-cnt {
   width: 85%;
   margin: auto;
@@ -44,5 +49,9 @@
 @media (max-width: 639px) {
   .store-header-cnt {
     width: 90%;
+  }
+
+  .arrow-nav-btn {
+    font-size: 26px;
   }
 }
