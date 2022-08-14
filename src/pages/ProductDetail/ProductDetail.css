@@ -21,11 +21,21 @@
 
 .product-detail-infoctn {
   display: flex;
-  padding: 10px;
+  padding: 18px;
   min-height: 100px;
   flex-direction: column;
   /* border: 1px solid black; */
   background-color: var(--bg-white);
+}
+
+.product-detail-name {
+  font-weight: bold;
+  font-family: Sora-Bold;
+  font-size: 18px;
+}
+
+.product-detail-amount {
+  margin-top: 12px;
 }
 
 @media (max-width: 639px) {
@@ -35,5 +45,10 @@
   .product-detail-img {
     width: 100%;
     height: auto;
+  }
+
+  .product-detail-img,
+  .product-detail-infoctn {
+    border-radius: 10px;
   }
 }

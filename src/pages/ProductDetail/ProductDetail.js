@@ -16,7 +16,8 @@ export default function ProductDetail() {
           />
         </div>
         <div className="product-detail-infoctn">
-          <span>Slim Fit Cotton Shirt</span>
+          <span className="product-detail-name">Slim Fit Cotton Shirt</span>
+          <span className="product-detail-amount">₦14,000</span>
         </div>
       </div>
     </div>
