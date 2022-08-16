@@ -9,7 +9,7 @@ export default function SubHeader({ title = "SubHeader Title", show = false }) {
   return (
     <header className="category-header slideInRight">
       <div className="productdesc-ctn">
-        <h4>{title}</h4>
+        <h3>{title}</h3>
       </div>
       <div>
         {show && (
