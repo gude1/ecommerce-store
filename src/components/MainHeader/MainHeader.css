@@ -47,6 +47,9 @@
 }
 
 @media (max-width: 639px) {
+  .store-header {
+    font-size: 12px;
+  }
   .store-header-cnt {
     width: 90%;
   }
