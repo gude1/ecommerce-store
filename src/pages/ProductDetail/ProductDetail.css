@@ -41,6 +41,13 @@
   font-family: Sora-Medium;
 }
 
+.product-detail-addcartbtn {
+  border-radius: 0;
+  margin-top: 18px;
+  width: 100px;
+  padding: 8px;
+}
+
 .product-detail-description {
   text-align: justify;
   margin-top: 18px;

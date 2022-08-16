@@ -1,5 +1,6 @@
 import React from "react";
 import SubHeader from "../../components/SubHeader/SubHeader";
+import Button from "../../components/ui/Button/Button";
 import CounterInput from "../../components/ui/CounterInput/CounterInput";
 import { Console } from "../../utils";
 import "./ProductDetail.css";
@@ -21,6 +22,7 @@ export default function ProductDetail() {
           <span className="product-detail-name">Slim Fit Cotton Shirt</span>
           <span className="product-detail-amount">₦14,000</span>
           <CounterInput />
+          <Button title="Add to Cart" className="product-detail-addcartbtn" />
           <span className="product-detail-description">
             Trousers (British English), slacks, or pants are an item of clothing
             that may have originated in Central Asia, worn from the waist to the
