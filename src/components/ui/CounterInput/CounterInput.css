@@ -1,0 +1,15 @@
+.counterinput-ctn {
+  display: flex;
+  margin-top: 18px;
+  width: 200px;
+  border: 1px solid red;
+}
+
+.counterinput {
+  display: block;
+  flex: 1;
+  border: 1px solid green;
+}
+.counterinput-btn {
+  border: 1px solid green;
+}

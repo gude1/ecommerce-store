@@ -11,7 +11,7 @@ export default function Home() {
   const navigate = useNavigate();
   return (
     <div>
-      <SubHeader show />
+      <SubHeader show title="Our Products" />
       <div className="productlist-ctn slideInUp">
         <Product
           className={"product"}

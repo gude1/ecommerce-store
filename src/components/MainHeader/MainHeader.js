@@ -11,16 +11,21 @@ export default function MainHeader({}) {
   return (
     <header className="store-header slideInDown">
       <nav className="store-header-cnt">
-        {location?.state?.goback && (
-          <IconButton
-            name={"west"}
-            className="arrow-nav-btn"
-            style={{ fontWeight: "bold", margin: 0 }}
-            onClick={() => navigate(-1)}
-          />
-        )}
+        <div
+          className="flex-row"
+          style={{ justifyContent: "center", alignItems: "center" }}
+        >
+          {location?.state?.goback && (
+            <IconButton
+              name={"west"}
+              className="arrow-nav-btn"
+              style={{ fontWeight: "bold", marginRight: "16px" }}
+              onClick={() => navigate(-1)}
+            />
+          )}
+          <h2 className="store-name">My Store</h2>
+        </div>
 
-        <h2 className="store-name">My Store </h2>
         <nav className="navtabs-ctn">
           <ul className="navtabs">
             <li>
