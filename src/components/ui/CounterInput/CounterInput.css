@@ -1,7 +1,7 @@
 .counterinput-ctn {
   display: flex;
-  margin-top: 18px;
   max-width: 120px;
+  background-color: transparent;
   /* border: 1px solid red; */
 }
 
@@ -13,6 +13,7 @@
 
 .counterinput > input {
   text-align: center;
+  background-color: transparent;
   height: 100%;
 }
 
@@ -26,4 +27,8 @@
 
 .counterinput-btn:hover {
   color: var(--blue) !important;
+}
+
+.product-details-counterinput {
+  margin-top: 18px;
 }

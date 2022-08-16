@@ -4,7 +4,7 @@ import { relativePath } from "../../utils";
 import IconButton from "../ui/IconButton/IconButton";
 import "./MainHeader.css";
 
-export default function MainHeader({}) {
+function MainHeader({}) {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -47,3 +47,5 @@ export default function MainHeader({}) {
     </header>
   );
 }
+
+export default MainHeader;

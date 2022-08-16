@@ -1,12 +1,18 @@
 import React from "react";
 import SubHeader from "../../components/SubHeader/SubHeader";
+import CartItem from "../../components/ui/CartItem/CartItem";
 import "./Cart.css";
 
 function Cart() {
   return (
     <div>
       <SubHeader title="Cart" />
-      <div className="slideInUp"></div>
+      <div className="slideInUp cartlist-ctn">
+        <CartItem />
+        <CartItem />
+        <CartItem />
+        <CartItem />
+      </div>
     </div>
   );
 }

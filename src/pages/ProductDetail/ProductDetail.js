@@ -23,7 +23,7 @@ export default function ProductDetail() {
           <div className="product-detail-infoctn">
             <span className="product-detail-name">Slim Fit Cotton Shirt</span>
             <span className="product-detail-amount">₦14,000</span>
-            <CounterInput />
+            <CounterInput className={"product-details-counterinput"} />
             <Button
               title="Add to Cart"
               className="product-detail-addcartbtn"

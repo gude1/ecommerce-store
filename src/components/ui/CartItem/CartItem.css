@@ -1,0 +1,29 @@
+.cartitem-ctn {
+  display: flex;
+  width: auto;
+  min-width: 250px;
+  min-height: 50px;
+  margin: 8px 0px;
+  padding: 8px;
+  align-items: center;
+  border: 1px solid purple;
+}
+
+.cartitem-ctn > img {
+  width: 70px;
+}
+
+.cartitem-detailsctn {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid green;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.cartitem-counterinput {
+  border: 1px solid yellow;
+  margin: 0;
+}
