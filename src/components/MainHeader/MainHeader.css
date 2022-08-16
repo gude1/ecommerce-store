@@ -20,6 +20,10 @@
   align-items: center;
 }
 
+.store-name {
+  font-size: 18px;
+}
+
 .navtabs-ctn {
   background-color: var(--bg-gray);
   border-radius: 10px;
@@ -56,5 +60,11 @@
 
   .arrow-nav-btn {
     font-size: 26px;
+  }
+}
+
+@media (max-width: 375px) {
+  .store-name {
+    font-size: 16px;
   }
 }

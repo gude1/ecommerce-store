@@ -4,8 +4,9 @@ import "./Cart.css";
 
 function Cart() {
   return (
-    <div className="slideInUp">
+    <div>
       <SubHeader title="Cart" />
+      <div className="slideInUp"></div>
     </div>
   );
 }
