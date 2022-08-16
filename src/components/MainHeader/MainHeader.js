@@ -23,7 +23,7 @@ export default function MainHeader({}) {
               onClick={() => navigate(-1)}
             />
           )}
-          <h2 className="store-name">My Store</h2>
+          <h2 className="store-name">Gidslab Perfumes</h2>
         </div>
 
         <nav className="navtabs-ctn">

@@ -28,7 +28,8 @@ export default function ProductDetail() {
             title="Add to Cart"
             className="product-detail-addcartbtn"
             buttonProps={{
-              onClick: () => navigate("/cart", { state: { goback: true } }),
+              onClick: () =>
+                navigate("/wtwttwt/cart", { state: { goback: true } }),
             }}
           />
           <span className="product-detail-description">
