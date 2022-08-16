@@ -1,15 +1,29 @@
 .counterinput-ctn {
   display: flex;
   margin-top: 18px;
-  width: 200px;
-  border: 1px solid red;
+  max-width: 120px;
+  /* border: 1px solid red; */
 }
 
 .counterinput {
   display: block;
   flex: 1;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
+
+.counterinput > input {
+  text-align: center;
+  height: 100%;
+}
+
 .counterinput-btn {
-  border: 1px solid green;
+  border: 1px solid dimgray;
+  border-radius: 5px;
+  color: black !important;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.counterinput-btn:hover {
+  color: var(--blue) !important;
 }

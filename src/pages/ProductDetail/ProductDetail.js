@@ -9,7 +9,6 @@ export default function ProductDetail() {
   return (
     <div className="slideInUp">
       <SubHeader title="Product Detail" />
-      <CounterInput />
 
       <div className="product-detail-ctn">
         <div className="product-detail-imgctn">
@@ -21,6 +20,7 @@ export default function ProductDetail() {
         <div className="product-detail-infoctn">
           <span className="product-detail-name">Slim Fit Cotton Shirt</span>
           <span className="product-detail-amount">₦14,000</span>
+          <CounterInput />
           <span className="product-detail-description">
             Trousers (British English), slacks, or pants are an item of clothing
             that may have originated in Central Asia, worn from the waist to the
