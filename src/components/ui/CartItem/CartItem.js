@@ -6,21 +6,33 @@ import "./CartItem.css";
 function CartItem({ className }) {
   return (
     <div className={`cartitem-ctn ${className}`}>
-      <div className="cartitem-panel"></div>
-      <IconButton name={"close"} className="cartitem-removebtn" />
+      <img
+        src="https://boxinbucket.s3.amazonaws.com/media/uploads/htt.jpeg"
+        className="cartitem-img"
+      />
+      <div className="cartitem-panel">
+        <h5 className="cartitem-productname">
+          Bespoke trousers in calvary twill
+        </h5>
+        <CounterInput />
+      </div>
     </div>
   );
+
   return (
     <div className={`cartitem-ctn ${className}`}>
-      <img src="https://boxinbucket.s3.amazonaws.com/media/uploads/htt.jpeg" />
-      <div className="cartitem-detailsctn">
-        <div>
-          <h5>Name</h5>
-          <span>Ref No</span>
+      <div className="cartitem-panel">
+        <img
+          src="https://boxinbucket.s3.amazonaws.com/media/uploads/htt.jpeg"
+          className="cartitem-img"
+        />
+        <div className="cartitem-detailsctn">
+          <h5 className="cartitem-productname">
+            Bespoke trousers in calvary twill
+          </h5>
         </div>
-        <CounterInput className={"cartitem-counterinput"} />
-        <span>N4000</span>
       </div>
+      <IconButton name={"close"} className="cartitem-removebtn" />
     </div>
   );
 }

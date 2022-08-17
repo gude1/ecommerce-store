@@ -4,10 +4,10 @@ import "react-dropdown/style.css";
 import "../../App.css";
 import "./SubHeader.css";
 
-export default function SubHeader({ title = "SubHeader Title", show = false }) {
+function SubHeader({ title = "SubHeader Title", show = false }) {
   const options = ["All", "Electronics", "Bags"];
   return (
-    <header className="category-header slideInUp">
+    <header className="category-header">
       <div className="productdesc-ctn">
         <h3>{title}</h3>
       </div>
@@ -33,3 +33,5 @@ export default function SubHeader({ title = "SubHeader Title", show = false }) {
     </header>
   );
 }
+
+export default SubHeader;

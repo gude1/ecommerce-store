@@ -5,12 +5,13 @@ import "./CounterInput.css";
 
 function CounterInput({
   className = {},
+  defaultValue = 0,
   plusBtnClassName = {},
   minusBtnClassName = {},
   inputCtnClassName = {},
   inputProps = {},
 }) {
-  const [countnum, setCountNum] = useState(0);
+  const [countnum, setCountNum] = useState(defaultValue || 0);
 
   const setCount = (num, action) => {
     switch (action) {

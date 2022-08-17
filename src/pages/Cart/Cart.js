@@ -7,11 +7,10 @@ function Cart() {
   return (
     <div>
       <SubHeader title="Cart" />
-      <div className="slideInUp cartlist-ctn">
+      <div className="cartlist-ctn slideInUp">
         <CartItem className={"cartlist-item"} />
-        <CartItem />
-        <CartItem />
-        <CartItem />
+        <CartItem className={"cartlist-item"} />
+        <CartItem className={"cartlist-item"} />
       </div>
     </div>
   );

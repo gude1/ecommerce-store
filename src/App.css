@@ -38,6 +38,7 @@
   --icon-color: #000;
   --black: #000;
   --text-gray: #777777;
+  --red: #f93232;
   --gray: #777777;
   --bg-gray: #f1f3f4;
   height: 100%;
@@ -155,21 +156,25 @@ li {
 /* Animation classes */
 .slideInUp {
   animation: slideInUp 1s;
+  will-change: scroll-position;
   -webkit-animation: slideInUp 1s;
 }
 
 .slideInDown {
   animation: slideInDown 1s;
+  will-change: scroll-position;
   -webkit-animation: slideInDown 1s;
 }
 
 .slideInLeft {
   animation: slideInleft 1s;
+  will-change: scroll-position;
   -webkit-animation: slideInleft 1s;
 }
 
 .slideInRight {
   animation: slideInRight 1s;
+  will-change: scroll-position;
   -webkit-animation: slideInRight 1s;
 }
 

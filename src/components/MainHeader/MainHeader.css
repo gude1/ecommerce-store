@@ -8,6 +8,8 @@
 
 .arrow-nav-btn {
   font-weight: bold;
+  margin: 0;
+  padding: 0;
   font-size: 32px;
 }
 
@@ -65,6 +67,6 @@
 
 @media (max-width: 375px) {
   .store-name {
-    font-size: 16px;
+    font-size: 10px;
   }
 }
