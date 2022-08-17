@@ -39,7 +39,11 @@ function MainHeader({}) {
               <IconButton name={"search"} className="navtabs-btn" />
             </li>
             <li>
-              <IconButton name={"shopping_cart"} className="navtabs-btn" />
+              <IconButton
+                name={"shopping_cart"}
+                className="navtabs-btn"
+                onClick={() => navigate(`/1324424/cart`, { goback: true })}
+              />
             </li>
           </ul>
         </nav>
