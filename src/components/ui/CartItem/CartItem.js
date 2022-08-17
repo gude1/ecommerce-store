@@ -14,8 +14,10 @@ function CartItem({ className }) {
         <h5 className="cartitem-productname">
           Bespoke trousers in calvary twill
         </h5>
-        <CounterInput />
+        <span className="cartitem-amount">N4000</span>
+        <CounterInput className={"cartitem-counterinput"} />
       </div>
+      <IconButton name={"disabled_by_default"} className="cartitem-removebtn" />
     </div>
   );
 

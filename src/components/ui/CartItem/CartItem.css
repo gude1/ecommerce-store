@@ -2,6 +2,7 @@
   display: flex;
   background-color: var(--bg-white);
   /* border: 1px solid red; */
+  padding: 12px 6px;
   min-width: 100px;
   min-height: 60px;
   margin: 8px 0px;
@@ -9,14 +10,14 @@
 
 .cartitem-img {
   width: 70px;
-  margin-left: 8px;
-  align-self: center;
+  margin-left: 12px;
+  align-self: flex-start;
 }
 
 .cartitem-panel {
-  border: 2px solid purple;
-  margin-left: 6px;
-  justify-content: center;
+  /* border: 2px solid purple; */
+  margin-left: 8px;
+  /* justify-content: center; */
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -24,8 +25,8 @@
 
 .cartitem-removebtn {
   /* border: 2px solid green; */
-  margin-right: 10px;
-  font-weight: bold;
+  margin: 0px 10px;
+  color: var(--black);
   font-size: 28px;
   align-self: center;
 }
@@ -54,9 +55,9 @@
 
 .cartitem-counterinput {
   /* border: 1px solid yellow; */
-  margin-left: 6px;
+  margin-top: 12px;
 }
 
 .cartitem-amount {
-  margin-left: 6px;
+  margin-top: 12px;
 }
