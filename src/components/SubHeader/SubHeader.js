@@ -7,7 +7,7 @@ import "./SubHeader.css";
 export default function SubHeader({ title = "SubHeader Title", show = false }) {
   const options = ["All", "Electronics", "Bags"];
   return (
-    <header className="category-header slideInRight">
+    <header className="category-header slideInUp">
       <div className="productdesc-ctn">
         <h3>{title}</h3>
       </div>

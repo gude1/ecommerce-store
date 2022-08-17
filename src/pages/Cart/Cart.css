@@ -1,5 +1,12 @@
 .cartlist-ctn {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  align-items: center;
+}
+
+.cartlist-item {
+  width: 100%;
+  max-width: 800px;
+  height: 100px;
 }

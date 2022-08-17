@@ -8,7 +8,7 @@ function Cart() {
     <div>
       <SubHeader title="Cart" />
       <div className="slideInUp cartlist-ctn">
-        <CartItem />
+        <CartItem className={"cartlist-item"} />
         <CartItem />
         <CartItem />
         <CartItem />
