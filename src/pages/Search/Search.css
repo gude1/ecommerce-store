@@ -1,3 +1,7 @@
 .searchinput:focus + .searchinput-label {
   display: none;
 }
+
+.searchinput:not(:placeholder-shown) + .searchinput-label {
+  display: none;
+}
