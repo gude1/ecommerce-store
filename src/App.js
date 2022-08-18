@@ -7,6 +7,7 @@ import SubHeader from "./components/SubHeader/SubHeader";
 import Home from "./pages/Home/Home";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import Cart from "./pages/Cart/Cart";
+import Search from "./pages/Search/Search";
 
 function Wrapper() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/:storeId" element={<Wrapper />}>
           <Route index element={<Home />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="search" element={<Search />} />
           <Route path="product/:productId" element={<ProductDetail />} />
         </Route>
       </Routes>

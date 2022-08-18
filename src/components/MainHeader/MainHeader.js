@@ -36,7 +36,13 @@ function MainHeader({}) {
               />
             </li>
             <li>
-              <IconButton name={"search"} className="navtabs-btn" />
+              <IconButton
+                name={"search"}
+                className="navtabs-btn"
+                onClick={() =>
+                  navigate(`/1324424/search`, { state: { goback: true } })
+                }
+              />
             </li>
             <li>
               <IconButton

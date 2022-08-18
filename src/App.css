@@ -33,7 +33,9 @@
 
 :root {
   --bg-color: #e9ecef;
+  /* --bg-color: rgb(231, 212, 193); */
   --bg-white: #fff;
+  /* --bg-white: rgb(231, 212, 193); */
   --blue: #4764e6;
   --icon-color: #000;
   --black: #000;
