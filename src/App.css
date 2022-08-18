@@ -81,6 +81,10 @@ textarea {
   -webkit-touch-callout: text; */
 }
 
+img {
+  background-color: hsla(0, 0%, 96.5%, 0.6);
+}
+
 .cover_page_container {
   position: fixed;
   /* border: 2px solid red; */

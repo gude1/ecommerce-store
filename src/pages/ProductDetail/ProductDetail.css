@@ -15,6 +15,7 @@
 
 .product-detail-img {
   object-fit: cover;
+  border: none;
   width: 400px;
   max-height: 400px;
   object-position: center;
