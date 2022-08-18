@@ -1,0 +1,115 @@
+.parentctn {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* border: 5px solid green; */
+  /* margin: 25px 15px; */
+}
+.errortxt {
+  margin-left: 10px;
+  font-family: Poppins-Bold;
+  color: rgba(249, 50, 50, 1);
+}
+
+.infotxt {
+  margin-left: 10px;
+  font-family: Poppins-Bold;
+  color: #4caf50;
+}
+
+.desctxt {
+  margin-left: 10px;
+  font-family: Poppins-Medium;
+  color: gray;
+}
+
+.material-textfield {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  width: 100%;
+  /* border: 5px solid red; */
+}
+.material-textfield > label {
+  position: absolute;
+  font-size: 1rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  color: gray;
+  padding: 0 0.3rem;
+  margin: 0 0.5rem;
+  transition: 0.1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+}
+
+.material-textfield > input {
+  width: 100%;
+  border: 1px solid rgba(138, 138, 160, 1);
+  outline: none;
+  /* border: 8px solid gray; */
+  border-radius: 5px;
+  padding: 1rem 0.7rem;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: "#3e3e3e";
+  transition: 0.1s ease-out;
+}
+
+.icon {
+  color: "red";
+  align-self: "center";
+  border: "1px solid black";
+  position: "absolute";
+  cursor: "pointer";
+  right: "5%";
+}
+
+.showlistctn {
+  position: absolute;
+  border: 1px solid lightgrey;
+  /* border: 2px solid gold; */
+  z-index: -3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 95%;
+  width: 100%;
+  min-height: 48px;
+}
+
+.showlistctn > a {
+  font-family: Poppins-Light;
+}
+
+.material-textfield > input:hover {
+  border: 2px solid rgba(71, 100, 230, 1);
+}
+
+.material-textfield > input:focus {
+  border: 1px solid rgba(71, 100, 230, 1);
+  outline: 2px solid rgba(248, 69, 252, 1);
+}
+
+.material-textfield > input:focus + label {
+  color: rgba(96, 93, 236, 1);
+  top: -16%;
+  transform: translateY(-50%) scale(0.9) !important;
+}
+
+.material-textfield > input:not(:placeholder-shown) + label {
+  top: -16%;
+  transform: translateY(-50%) scale(0.9) !important;
+}
+
+.material-textfield > input:not(:focus)::placeholder {
+  opacity: 0;
+}

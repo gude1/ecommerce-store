@@ -1,0 +1,3 @@
+.searchinput:focus + .searchinput-label {
+  display: none;
+}
