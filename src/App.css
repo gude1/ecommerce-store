@@ -33,6 +33,7 @@
 
 :root {
   --bg-color: #e9ecef;
+  --opaque: hsla(0, 0%, 96.5%, 0.6);
   /* --bg-color: rgb(231, 212, 193); */
   --bg-white: #fff;
   /* --bg-white: rgb(231, 212, 193); */
@@ -84,7 +85,7 @@ textarea {
 }
 
 img {
-  background-color: hsla(0, 0%, 96.5%, 0.6);
+  background-color: var(--opaque);
 }
 
 .cover_page_container {

@@ -1,7 +1,28 @@
+.searchinput {
+  height: 45px;
+  border-radius: 0px !important;
+}
+
 .searchinput:focus + .searchinput-label {
   display: none;
 }
 
 .searchinput:not(:placeholder-shown) + .searchinput-label {
   display: none;
+}
+
+.searchinput-btn {
+  font-size: 25px;
+  height: 85%;
+  align-self: center;
+  /* border-radius: 5px; */
+  padding: 8px;
+  transition: all 0.8s;
+  margin: 0 8px;
+  background-color: var(--opaque);
+}
+
+.searchinput-btn:hover {
+  color: var(--bg-white);
+  background-color: var(--blue);
 }
