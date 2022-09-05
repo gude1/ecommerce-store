@@ -7,13 +7,13 @@
   min-height: 70px;
   /* box-shadow: 1px 5px 24px 0 rgb(68 102 242 / 5%); */
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
-  padding: 0px 24x;
+  padding: 0px 24px;
 }
 
 .dashboard-header-logo {
   object-fit: cover;
-  max-width: 100px;
-  max-height: 55px;
+  width: 135px;
+  max-height: 65px;
   object-position: center;
 }
 
@@ -52,4 +52,15 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
+}
+
+@media (max-width: 639px) {
+  .dashboard-header-ctn {
+    padding: 0 20px;
+  }
+
+  .dashboard-header-logo {
+    width: 100px;
+    max-height: 65px;
+  }
 }
