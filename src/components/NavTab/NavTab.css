@@ -1,0 +1,19 @@
+.dashboard-sidebar-ctn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  /* height: 100%; */
+  /* border: 1px solid red; */
+  background-color: var(--bg-white);
+  width: 25%;
+  max-width: 16rem;
+  padding: 0px 20px;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+}
+
+.dashboard-sidebar-logo-ctn {
+  display: flex;
+  align-items: center;
+  height: 70px;
+}

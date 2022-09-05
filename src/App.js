@@ -8,6 +8,9 @@ import Home from "./pages/Home/Home";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import Cart from "./pages/Cart/Cart";
 import Search from "./pages/Search/Search";
+import DashboardHeader from "./components/DashboardHeader/DashboardHeader";
+import DashHome from "./pages/DashHome/DashHome";
+import NavTab from "./components/NavTab/NavTab";
 
 function Wrapper() {
   return (
@@ -22,10 +25,27 @@ function Wrapper() {
   );
 }
 
+function DashboardWrapper() {
+  return (
+    <div className="cover_page_container">
+      <DashboardHeader />
+      <NavTab />
+      <div className="scroll-vertical">
+        <main className="dashboard-container">
+          <Outlet />
+        </main>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/dashboard" element={<DashboardWrapper />}>
+          <Route index element={<DashHome />} />
+        </Route>
         <Route path="/:storeId" element={<Wrapper />}>
           <Route index element={<Home />} />
           <Route path="cart" element={<Cart />} />

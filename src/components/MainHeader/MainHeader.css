@@ -4,6 +4,7 @@
   background-color: var(--bg-white);
   min-height: 70px;
   box-shadow: 1px 5px 24px 0 rgb(68 102 242 / 5%);
+  /* box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%); */
 }
 
 .arrow-nav-btn {
