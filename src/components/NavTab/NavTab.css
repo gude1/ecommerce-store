@@ -14,9 +14,60 @@
 
 .dashboard-sidebar-logo-ctn {
   display: flex;
+  position: relative;
   align-items: center;
   /* border: 1px solid red; */
   height: 70px;
+}
+
+.dashboard-sidebar-logo {
+  left: 5%;
+  position: absolute;
+}
+
+.dashboard-sidebar-mainctn {
+  /* border: 1px solid red; */
+  overflow-y: auto;
+  min-height: 150px;
+}
+
+.dashboard-sidebar-navbtn {
+  width: 100%;
+  margin-top: 32px;
+  background-color: transparent;
+  padding: 24px 0px;
+  position: relative;
+  border-radius: 0;
+}
+
+.dashboard-sidebar-navbtn:hover {
+  border: none;
+}
+
+.dashboard-sidebar-navbtn:hover .dashboard-sidebar-navbtn-title {
+  color: var(--blue) !important;
+}
+
+.dashboard-sidebar-navbtn:hover .dashboard-sidebar-navbtn-icon {
+  color: var(--blue) !important;
+}
+
+.dashboard-sidebar-navbtn-icon {
+  position: absolute;
+  transition: 0.6s;
+  font-weight: 600;
+  left: 5%;
+}
+.dashboard-sidebar-navbtn-title {
+  position: absolute;
+  transition: 0.6s;
+  font-weight: 600;
+  font-size: 14px;
+  left: 20%;
+}
+.dashboard-sidebar-navbtn-icon,
+.dashboard-sidebar-navbtn-title {
+  color: var(--gray);
 }
 
 @media (max-width: 639px) {
