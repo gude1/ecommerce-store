@@ -60,6 +60,7 @@
 }
 .dashboard-sidebar-navbtn-title {
   position: absolute;
+  margin-left: 10px;
   transition: 0.6s;
   font-weight: 600;
   font-size: 14px;

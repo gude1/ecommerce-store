@@ -4,12 +4,14 @@ import "./NavTab.css";
 
 function NavTab() {
   return (
-    <div className="dashboard-sidebar-ctn">
+    <div className="dashboard-sidebar-ctn slideInUp">
       <div className="dashboard-sidebar-logo-ctn">
         <img
+          alt="Store Logo"
           className="dashboard-header-logo dashboard-sidebar-logo"
           src={
-            "https://dashtar-admin.vercel.app/static/media/logo-dark.acf69e90.svg"
+            "https://www.tailorbrands.com/wp-content/uploads/2021/01/coca-cola-logo.jpg"
+            // "https://dashtar-admin.vercel.app/static/media/logo-dark.acf69e90.svg"
           }
         />
       </div>
