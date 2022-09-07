@@ -13,6 +13,7 @@
 .dashboard-header-logo {
   object-fit: cover;
   width: 120px;
+  display: none;
   max-height: 65px;
   object-position: center;
 }
@@ -61,6 +62,7 @@
 
   .dashboard-header-logo {
     width: 100px;
+    display: inline;
     max-height: 65px;
   }
 }

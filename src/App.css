@@ -126,10 +126,10 @@ li {
   width: auto;
   will-change: scroll-position;
   margin-left: 16rem;
-  /* min-height: 100%; */
-  border: 5px solid green;
-  /* padding: 0px 32px; */
-  /* margin: 0px auto; */
+  overflow-y: auto;
+  min-height: 70%;
+  padding: 0px 24px;
+  /* border: 5px solid green; */
 }
 
 .dashboard-container::-webkit-scrollbar {
