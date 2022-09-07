@@ -123,14 +123,17 @@ li {
 }
 
 .dashboard-container {
-  width: 100%;
+  width: auto;
   will-change: scroll-position;
-  min-height: 100%;
-  flex: 1;
-  border: 1px solid red;
+  margin-left: 16rem;
+  /* min-height: 100%; */
+  border: 5px solid green;
   /* padding: 0px 32px; */
   /* margin: 0px auto; */
-  margin-top: 10px;
+}
+
+.dashboard-container::-webkit-scrollbar {
+  display: none;
 }
 
 .card-ctn {
@@ -232,5 +235,9 @@ li {
   }
   .productlist-ctn {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .dashboard-container {
+    margin-left: 0;
   }
 }

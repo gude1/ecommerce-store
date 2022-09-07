@@ -4,7 +4,7 @@ import "./NavTab.css";
 
 function NavTab() {
   return (
-    <div className="dashboard-sidebar-ctn slideInUp">
+    <div className="dashboard-sidebar-ctn slideInRight">
       <div className="dashboard-sidebar-logo-ctn">
         <img
           alt="Store Logo"

@@ -6,8 +6,8 @@
   /* height: 100%; */
   /* border: 1px solid red; */
   background-color: var(--bg-white);
-  width: 25%;
-  max-width: 16rem;
+  /* width: 25%; */
+  width: 16rem;
   padding: 0px 24px;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
 }
@@ -23,6 +23,7 @@
 .dashboard-sidebar-logo {
   left: 5%;
   position: absolute;
+  display: inline;
 }
 
 .dashboard-sidebar-mainctn {

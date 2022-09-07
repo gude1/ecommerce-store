@@ -30,11 +30,9 @@ function DashboardWrapper() {
     <div className="cover_page_container">
       <DashboardHeader />
       <NavTab />
-      <div className="scroll-vertical">
-        <main className="dashboard-container">
-          <Outlet />
-        </main>
-      </div>
+      <main className="dashboard-container">
+        <Outlet />
+      </main>
     </div>
   );
 }

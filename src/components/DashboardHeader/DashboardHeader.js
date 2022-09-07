@@ -4,7 +4,7 @@ import "./DashboardHeader.css";
 
 function DashboardHeader() {
   return (
-    <nav className="dashboard-header-ctn slideInRight">
+    <nav className="dashboard-header-ctn">
       <div className="dashboard-header-logo-ctn">
         <img
           className="dashboard-header-logo"
