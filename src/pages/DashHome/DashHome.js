@@ -1,13 +1,8 @@
 import React from "react";
-import SubHeader from "../../components/SubHeader/SubHeader";
 import "./DashHome.css";
 
 function DashHome() {
-  return (
-    <div>
-      <SubHeader title="Dashboard Overview" />
-    </div>
-  );
+  return <div>Dash</div>;
 }
 
 export default DashHome;
