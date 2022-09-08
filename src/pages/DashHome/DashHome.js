@@ -14,7 +14,9 @@ function DashHome() {
       />
       <div className="slideInUp">
         <div className="dash-home-first-section">
-          <Panel icon="sell" />
+          <Panel icon="sell" className="dash-home-panel" />
+          <Panel icon="sell" className="dash-home-panel" />
+          <Panel icon="sell" className="dash-home-panel" />
         </div>
       </div>
     </div>

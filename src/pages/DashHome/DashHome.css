@@ -1,2 +1,9 @@
 .dash-home-first-section {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 5px;
+  /* border: 1px solid black; */
+}
+
+.dash-home-panel {
 }
