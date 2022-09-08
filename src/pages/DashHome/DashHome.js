@@ -2,6 +2,7 @@ import React from "react";
 import SubHeader from "../../components/SubHeader/SubHeader";
 import "../../App.css";
 import "./DashHome.css";
+import Panel from "../../components/Panel/Panel";
 
 function DashHome() {
   return (
@@ -11,6 +12,9 @@ function DashHome() {
         className="dashboard-subheader"
         titleClassName="dashboard-subheader-title"
       />
+      <div className="slideInUp">
+        <Panel />
+      </div>
     </div>
   );
 }
