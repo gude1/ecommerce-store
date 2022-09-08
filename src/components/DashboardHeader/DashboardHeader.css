@@ -30,6 +30,7 @@
   /* border: 2px solid black; */
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   min-width: 100px;
   min-height: 50px;
 }
@@ -57,7 +58,7 @@
 
 @media (max-width: 639px) {
   .dashboard-header-ctn {
-    padding: 0 20px;
+    padding: 0 16px;
   }
 
   .dashboard-header-logo {
