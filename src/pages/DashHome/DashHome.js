@@ -13,7 +13,9 @@ function DashHome() {
         titleClassName="dashboard-subheader-title"
       />
       <div className="slideInUp">
-        <Panel />
+        <div className="dash-home-first-section">
+          <Panel icon="sell" />
+        </div>
       </div>
     </div>
   );
