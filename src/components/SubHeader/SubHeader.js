@@ -4,12 +4,17 @@ import "react-dropdown/style.css";
 import "../../App.css";
 import "./SubHeader.css";
 
-function SubHeader({ title = "SubHeader Title", show = false }) {
+function SubHeader({
+  title = "SubHeader Title",
+  className = "",
+  show = false,
+  titleClassName = "",
+}) {
   const options = ["All", "Electronics", "Bags"];
   return (
-    <header className="category-header">
+    <header className={`category-header ${className}`}>
       <div className="productdesc-ctn">
-        <h3>{title}</h3>
+        <h3 className={`${titleClassName}`}>{title}</h3>
       </div>
       <div>
         {show && (

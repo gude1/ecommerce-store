@@ -22,7 +22,7 @@ function DashboardHeader() {
         <div>
           <IconButton
             name={"notifications"}
-            className="dashboard-header-notebtn"
+            btnClassName="dashboard-header-notebtn"
           />
         </div>
         <div className="dashboard-header-profileimg-ctn">

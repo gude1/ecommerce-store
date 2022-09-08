@@ -132,6 +132,16 @@ li {
   /* border: 5px solid green; */
 }
 
+.dashboard-subheader {
+  margin: 8px 0px !important;
+}
+
+.dashboard-subheader-title {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+}
+
 .dashboard-container::-webkit-scrollbar {
   display: none;
 }
