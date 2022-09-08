@@ -1,8 +1,9 @@
 import React from "react";
 import Button from "../ui/Button/Button";
+import IconButton from "../ui/IconButton/IconButton";
 import "./NavTab.css";
 
-function NavTab() {
+function SideBar() {
   return (
     <div className="dashboard-sidebar-ctn slideInRight">
       <div className="dashboard-sidebar-logo-ctn">
@@ -57,6 +58,42 @@ function NavTab() {
         />
       </div>
     </div>
+  );
+}
+
+function BottomTab() {
+  return (
+    <div className="dashboard-bottom-tab">
+      <IconButton
+        name={"dashboard"}
+        className={"dashboard-bottom-tab-btn"}
+        title={"Dashboard"}
+      />
+      <IconButton
+        name={"inventory_2"}
+        className={"dashboard-bottom-tab-btn"}
+        title={"Products"}
+      />
+      <IconButton
+        name={"sell"}
+        className={"dashboard-bottom-tab-btn"}
+        title={"Orders"}
+      />
+      <IconButton
+        name={"person_pin"}
+        className={"dashboard-bottom-tab-btn"}
+        title={"Customers"}
+      />
+    </div>
+  );
+}
+
+function NavTab() {
+  return (
+    <>
+      <SideBar />
+      <BottomTab />
+    </>
   );
 }
 export default NavTab;

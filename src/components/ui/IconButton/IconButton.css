@@ -7,3 +7,15 @@
   align-items: center;
   color: var(--icon-color);
 }
+
+.icon-btn-ctn {
+  display: flex;
+  /* border: 1px solid red; */
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-btn-txt {
+  font-size: 12px;
+  margin-top: 8px;
+}
