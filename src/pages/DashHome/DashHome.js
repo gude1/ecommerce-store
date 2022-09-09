@@ -58,7 +58,7 @@ function DashHome() {
           icon="sell"
           className="dash-home-panel"
           style={{ backgroundColor: "var(--blue)" }}
-          title="This Month"
+          title="Month Orders"
         />
         <Panel
           icon="sell"
@@ -73,8 +73,14 @@ function DashHome() {
           >
             <span className="graph-title">Sales</span>
             <Dropdown
-              options={["aag", "aga"]}
-              placeholder="aaag"
+              options={[
+                "Yearly",
+                "Monthly",
+                "Two Weeks",
+                "Last Week",
+                "This Week",
+              ]}
+              placeholder="This Week"
               controlClassName="category-select-control"
               arrowOpen={
                 <span className="material-symbols-outlined category-select-arrow">

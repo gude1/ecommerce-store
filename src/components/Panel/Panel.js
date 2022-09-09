@@ -9,6 +9,7 @@ function Panel({
   title = "Orders",
   amount = 0,
 }) {
+  // ₦
   return (
     <div className={`dashboard-panel-ctn ${className}`} style={style}>
       <span
@@ -17,7 +18,7 @@ function Panel({
         {icon}
       </span>
       <span className="dashboard-panel-txt">{title}</span>
-      <span className="dashboard-panel-price">₦{amount}</span>
+      <span className="dashboard-panel-price">{amount}</span>
     </div>
   );
 }
