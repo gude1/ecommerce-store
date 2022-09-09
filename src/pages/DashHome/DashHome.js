@@ -1,5 +1,7 @@
 import React from "react";
 import SubHeader from "../../components/SubHeader/SubHeader";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 import {
   Area,
   AreaChart,
@@ -65,6 +67,27 @@ function DashHome() {
           title="Total Orders"
         />
         <div className="dashboard-graph-ctn">
+          <div
+            className="flex-row"
+            style={{ justifyContent: "space-between", alignItems: "center" }}
+          >
+            <span className="graph-title">Sales</span>
+            <Dropdown
+              options={["aag", "aga"]}
+              placeholder="aaag"
+              controlClassName="category-select-control"
+              arrowOpen={
+                <span className="material-symbols-outlined category-select-arrow">
+                  arrow_drop_up
+                </span>
+              }
+              arrowClosed={
+                <span className="material-symbols-outlined category-select-arrow">
+                  arrow_drop_down
+                </span>
+              }
+            />
+          </div>
           <ResponsiveContainer width={"100%"} height={250}>
             <AreaChart data={staticgraphdata} margin={{ top: 0 }}>
               <defs>

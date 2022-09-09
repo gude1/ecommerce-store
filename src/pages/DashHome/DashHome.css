@@ -17,9 +17,16 @@
   width: 100%;
   margin-top: 8px;
   background-color: var(--bg-white);
-  padding: 8px;
-  border-radius: 5px;
+  grid-column: span 12;
+  max-width: 700px !important;
+  padding: 16px;
+  border-radius: 15px;
   /* border: 1px solid red; */
+}
+
+.graph-title {
+  font-weight: 700;
+  color: var(--blue);
 }
 
 @media (max-width: 639px) {
@@ -36,5 +43,8 @@
   .dash-home-panel {
     width: 100%;
     /* border: 1px solid black; */
+  }
+  .dashboard-graph-ctn {
+    grid-column: span 1;
   }
 }
