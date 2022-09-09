@@ -10,11 +10,12 @@
 }
 
 .dash-home > * {
-  max-width: 380px !important;
+  /* max-width: 380px !important; */
 }
 
 .dashboard-graph-ctn {
   width: 100%;
+  column-span: 12;
   margin-top: 8px;
   background-color: var(--bg-white);
   padding: 8px;
