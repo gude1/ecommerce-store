@@ -1,14 +1,25 @@
 .dash-home {
   display: grid;
-  width: 100%;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
+  gap: 8px;
   /* border: 1px solid black; */
 }
 
 .dash-home-panel {
-  max-width: 380px !important;
   padding: 16px 0px !important;
+}
+
+.dash-home > * {
+  max-width: 380px !important;
+}
+
+.dashboard-graph-ctn {
+  width: 100%;
+  margin-top: 8px;
+  background-color: var(--bg-white);
+  padding: 8px;
+  border-radius: 0rem;
+  /* border: 1px solid red; */
 }
 
 @media (max-width: 639px) {
@@ -17,9 +28,13 @@
     justify-items: center;
     row-gap: 15px;
   }
+
+  .dash-home > * {
+    max-width: 600px !important;
+  }
+
   .dash-home-panel {
     width: 100%;
-    max-width: 600px !important;
     /* border: 1px solid black; */
   }
 }
