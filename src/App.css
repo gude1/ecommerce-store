@@ -129,6 +129,7 @@ li {
   overflow-y: auto;
   height: 93%;
   padding: 0px 24px;
+  padding-bottom: 100px;
   /* border: 5px solid green; */
   will-change: scroll-position;
 }
@@ -259,7 +260,7 @@ li {
   }
   .dashboard-scroll-ctn {
     margin-left: 0;
-    height: 83%;
     padding: 0 16px;
+    padding-bottom: 100px;
   }
 }
