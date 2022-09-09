@@ -39,6 +39,7 @@
   --white: #fff;
   /* --bg-white: rgb(231, 212, 193); */
   --blue: #4764e6;
+  --green: #0e9f6e;
   --icon-color: #000;
   --black: #000;
   --text-gray: #777777;
@@ -123,23 +124,29 @@ li {
   margin-top: 10px;
 }
 
-.dashboard-container {
-  width: auto;
-  will-change: scroll-position;
+.dashboard-scroll-ctn {
   margin-left: 16rem;
   overflow-y: auto;
-  min-height: 70%;
+  height: 93%;
   padding: 0px 24px;
+  /* border: 5px solid green; */
+  will-change: scroll-position;
+}
+
+.dashboard-container {
+  width: auto;
+  max-width: 1300px;
+  margin: auto;
   /* border: 5px solid green; */
 }
 
 .dashboard-subheader {
-  margin: 8px 0px !important;
+  margin: 16px 0px !important;
 }
 
 .dashboard-subheader-title {
   font-size: 18px !important;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   text-transform: none !important;
 }
 
@@ -249,7 +256,10 @@ li {
   }
 
   .dashboard-container {
+  }
+  .dashboard-scroll-ctn {
     margin-left: 0;
+    height: 79%;
     padding: 0 16px;
   }
 }

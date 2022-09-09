@@ -1,9 +1,24 @@
 .dash-home-first-section {
   display: grid;
-  grid-template-columns: auto auto auto;
-  column-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
   /* border: 1px solid black; */
 }
 
 .dash-home-panel {
+  max-width: 380px !important;
+  padding: 16px 0px !important;
+}
+
+@media (max-width: 639px) {
+  .dash-home-first-section {
+    grid-template-columns: auto;
+    row-gap: 15px;
+  }
+  .dash-home-panel {
+    margin: auto;
+    width: 100%;
+    grid-area: auto;
+    /* border: 1px solid black; */
+  }
 }

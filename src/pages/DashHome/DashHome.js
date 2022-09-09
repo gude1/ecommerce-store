@@ -14,9 +14,19 @@ function DashHome() {
       />
       <div className="slideInUp">
         <div className="dash-home-first-section">
-          <Panel icon="sell" className="dash-home-panel" />
-          <Panel icon="sell" className="dash-home-panel" />
-          <Panel icon="sell" className="dash-home-panel" />
+          <Panel icon="sell" className="dash-home-panel" title="Today Orders" />
+          <Panel
+            icon="sell"
+            className="dash-home-panel"
+            style={{ backgroundColor: "var(--blue)" }}
+            title="This Month"
+          />
+          <Panel
+            icon="sell"
+            className="dash-home-panel"
+            style={{ backgroundColor: "var(--green)" }}
+            title="Total Orders"
+          />
         </div>
       </div>
     </div>

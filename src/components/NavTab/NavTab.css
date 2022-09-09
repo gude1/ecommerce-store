@@ -4,6 +4,7 @@
   left: 0;
   bottom: 0;
   /* height: 100%; */
+  z-index: 10;
   /* border: 1px solid red; */
   background-color: var(--bg-white);
   /* width: 25%; */
@@ -77,6 +78,7 @@
 .dashboard-bottom-tab {
   bottom: 0;
   position: absolute;
+  z-index: 10;
   display: none;
   /* box-shadow: 0 -1px 2px 0 rgb(0 0 0 / 5%); */
   box-shadow: 0px -5px 24px 0 rgb(68 102 242 / 5%);

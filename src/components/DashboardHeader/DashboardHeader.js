@@ -18,18 +18,20 @@ function DashboardHeader() {
           }
         />
       </div>
-      <div className="dashboard-header-items-ctn">
-        <div>
-          <IconButton
-            name={"notifications"}
-            btnClassName="dashboard-header-notebtn"
-          />
-        </div>
-        <div className="dashboard-header-profileimg-ctn">
-          <img
-            src={"https://i.ibb.co/WpM5yZZ/9.png"}
-            className="dashboard-header-profileimg"
-          />
+      <div className="dashboard-header-items-container">
+        <div className="dashboard-header-items-ctn">
+          <div>
+            <IconButton
+              name={"notifications"}
+              btnClassName="dashboard-header-notebtn"
+            />
+          </div>
+          <div className="dashboard-header-profileimg-ctn">
+            <img
+              src={"https://i.ibb.co/WpM5yZZ/9.png"}
+              className="dashboard-header-profileimg"
+            />
+          </div>
         </div>
       </div>
     </nav>
