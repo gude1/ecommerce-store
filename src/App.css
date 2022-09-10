@@ -243,12 +243,6 @@ li {
   .scroll-vertical::-webkit-scrollbar {
     display: none;
   }
-}
-
-@media (min-width: 912px) {
-}
-
-@media (max-width: 639px) {
   .container {
     width: 90%;
   }
@@ -257,10 +251,14 @@ li {
   }
 
   .dashboard-container {
+    max-width: 800px;
   }
   .dashboard-scroll-ctn {
     margin-left: 0;
     padding: 0 16px;
     padding-bottom: 100px;
   }
+}
+
+@media (max-width: 639px) {
 }

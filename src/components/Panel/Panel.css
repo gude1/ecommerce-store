@@ -1,8 +1,9 @@
 .dashboard-panel-ctn {
-  max-width: 316px;
+  min-width: 300px;
   background-color: #0694a2;
   display: flex;
   border-radius: 0.5rem;
+  min-height: 150px;
   justify-content: center;
   /* border: 2px solid black; */
   padding: 16px 6px;

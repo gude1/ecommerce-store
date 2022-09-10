@@ -107,7 +107,7 @@
   color: var(--blue) !important;
 }
 
-@media (max-width: 639px) {
+@media (max-width: 912px) {
   .dashboard-sidebar-ctn {
     display: none;
   }

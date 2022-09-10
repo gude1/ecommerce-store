@@ -52,20 +52,22 @@ function DashHome() {
         className="dashboard-subheader"
         titleClassName="dashboard-subheader-title"
       />
-      <div className="slideInUp dash-home">
-        <Panel icon="sell" className="dash-home-panel" title="Today Orders" />
-        <Panel
-          icon="sell"
-          className="dash-home-panel"
-          style={{ backgroundColor: "var(--blue)" }}
-          title="Month Orders"
-        />
-        <Panel
-          icon="sell"
-          className="dash-home-panel"
-          style={{ backgroundColor: "var(--green)" }}
-          title="Total Orders"
-        />
+      <div className="slideInUp dash-ctn">
+        <div className="dash-home-frist-section">
+          <Panel icon="sell" className="dash-home-panel" title="Today Orders" />
+          <Panel
+            icon="sell"
+            className="dash-home-panel"
+            style={{ backgroundColor: "var(--blue)" }}
+            title="Month Orders"
+          />
+          <Panel
+            icon="sell"
+            className="dash-home-panel"
+            style={{ backgroundColor: "var(--green)" }}
+            title="Total Orders"
+          />
+        </div>
         <div className="dashboard-graph-ctn">
           <div
             className="flex-row"

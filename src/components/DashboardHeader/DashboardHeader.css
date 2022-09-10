@@ -64,7 +64,7 @@
   object-position: center;
 }
 
-@media (max-width: 639px) {
+@media (max-width: 912px) {
   .dashboard-header-ctn {
     padding: 0 16px;
     margin-left: 0px;
