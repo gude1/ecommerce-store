@@ -160,6 +160,17 @@ li {
   flex-direction: column;
 }
 
+.auth-ctn {
+  width: 100%;
+  padding: 24px 0px;
+  min-height: 100vh;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .card-ctn {
   display: grid;
   overflow-y: auto;
@@ -273,4 +284,7 @@ li {
 }
 
 @media (max-width: 639px) {
+  .auth-ctn {
+    justify-content: flex-start;
+  }
 }

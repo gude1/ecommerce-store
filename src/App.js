@@ -11,6 +11,7 @@ import Search from "./pages/Search/Search";
 import DashboardHeader from "./components/DashboardHeader/DashboardHeader";
 import DashHome from "./pages/DashHome/DashHome";
 import NavTab from "./components/NavTab/NavTab";
+import Signup from "./pages/Signup/Signup";
 
 function Wrapper() {
   return (
@@ -43,6 +44,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/auth">
+          <Route index element={<Signup />} />
+        </Route>
         <Route path="/dashboard" element={<DashboardWrapper />}>
           <Route index element={<DashHome />} />
         </Route>
