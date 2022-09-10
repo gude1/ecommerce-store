@@ -1,8 +1,3 @@
-.dash-ctn {
-  display: flex;
-  flex-direction: column;
-}
-
 .dash-home-frist-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

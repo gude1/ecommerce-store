@@ -155,6 +155,11 @@ li {
   display: none;
 }
 
+.dash-ctn {
+  display: flex;
+  flex-direction: column;
+}
+
 .card-ctn {
   display: grid;
   overflow-y: auto;
@@ -250,10 +255,20 @@ li {
   .dashboard-container {
     max-width: 700px;
   }
+
   .dashboard-scroll-ctn {
     margin-left: 0;
     padding: 0 16px;
     padding-bottom: 100px;
+  }
+
+  .dash-ctn {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dash-ctn > * {
+    width: 100%;
   }
 }
 
