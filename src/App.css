@@ -135,7 +135,7 @@ li {
 }
 
 .dashboard-container {
-  width: auto;
+  width: 100%;
   max-width: 1300px;
   margin: auto;
   /* border: 5px solid green; */
@@ -248,7 +248,7 @@ li {
   }
 
   .dashboard-container {
-    max-width: 800px;
+    max-width: 700px;
   }
   .dashboard-scroll-ctn {
     margin-left: 0;
