@@ -136,6 +136,7 @@ function DashHome() {
                 itemStyle={{
                   color: "white",
                   fontFamily: "Montserrat-Regular",
+                  border: "0",
                   fontStyle: "normal",
                   fontWeight: "500",
                   fontSize: "12px",

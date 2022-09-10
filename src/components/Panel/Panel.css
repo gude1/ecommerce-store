@@ -1,9 +1,9 @@
 .dashboard-panel-ctn {
-  min-width: 300px;
+  min-width: 50px;
   background-color: #0694a2;
   display: flex;
   border-radius: 0.5rem;
-  min-height: 150px;
+  min-height: 50px;
   justify-content: center;
   /* border: 2px solid black; */
   padding: 16px 6px;
@@ -20,12 +20,14 @@
 .dashboard-panel-txt {
   font-size: 16px;
   margin: 6px 0px;
+  text-align: center;
   color: var(--white);
 }
 
 .dashboard-panel-price {
   font-size: 24px;
   margin: 6px 0px;
+  text-align: center;
   font-family: Sora-Bold;
   color: var(--white);
 }
