@@ -32,7 +32,9 @@
 }
 
 :root {
-  --bg-color: #e9ecef;
+  /* --bg-color: #e9ecef; */
+  /* --bg-color: #f9fafb; */
+  --bg-color: rgb(241 245 249);
   --opaque: hsla(0, 0%, 96.5%, 0.6);
   /* --bg-color: rgb(231, 212, 193); */
   --bg-white: #fff;

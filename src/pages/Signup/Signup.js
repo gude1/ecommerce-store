@@ -6,7 +6,9 @@ function Signup() {
     <div className="auth-ctn slideInUp">
       <div className="authform-ctn">
         <div className="authform-picctn"></div>
-        <div className="authform-detailctn"></div>
+        <div className="authform-detailctn">
+          <form className="authform"></form>
+        </div>
       </div>
     </div>
   );
