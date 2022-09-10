@@ -49,6 +49,7 @@
   --gray: #777777;
   --light-gray: #d5d6d7;
   --bg-gray: #f1f3f4;
+  --input-bg: rgb(243 244 246);
   height: 100%;
 }
 

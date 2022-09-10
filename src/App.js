@@ -40,11 +40,21 @@ function DashboardWrapper() {
   );
 }
 
+function AuthWrapper() {
+  return (
+    <div className="cover_page_container">
+      <div className="scroll-vertical">
+        <Outlet />
+      </div>
+    </div>
+  );
+}
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/auth">
+        <Route path="/auth" element={<AuthWrapper />}>
           <Route index element={<Signup />} />
         </Route>
         <Route path="/dashboard" element={<DashboardWrapper />}>

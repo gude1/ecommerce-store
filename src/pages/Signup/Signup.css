@@ -11,13 +11,13 @@
 }
 
 .authform-picctn {
-  flex: 0.8;
-
+  flex: 1.2;
   background-color: var(--opaque);
   background-image: url(../../assets/images/commerce-img.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  /* #f4f5f7 */
   /* border: 2px solid black; */
 }
 
@@ -29,18 +29,46 @@
 
 .authform-detailctn {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: var(--bg-white);
   /* border: 2px solid yellow; */
 }
 
 .authform {
-  width: 95%;
-  border: 1px solid red;
+  width: 90%;
+  /* border: 1px solid red; */
   min-height: 100px;
-  margin: 24px 0px;
+  display: flex;
+  flex-direction: column;
+  margin: 24px auto;
+}
+
+.authform-title {
+  font-family: Sora-Bold;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+.authform-inputctn {
+  margin: 16px 0px;
+  /* border: 5px solid green; */
+}
+
+.authform-input {
+  border-radius: 5px !important;
+  background-color: var(--input-bg);
+  border-color: transparent !important;
+}
+
+.authform-input-label {
+  top: -20% !important;
+}
+
+.authform-actionbtn {
+  margin: 12px auto;
+}
+
+.authform-input:focus {
+  outline-color: var(--blue) !important;
 }
 
 @media (max-width: 639px) {
@@ -50,6 +78,6 @@
     max-height: 650px;
   }
   .authform-picctn {
-    flex: 0.3;
+    flex: 3;
   }
 }
