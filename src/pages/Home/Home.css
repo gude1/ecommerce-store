@@ -11,3 +11,9 @@
   width: auto !important;
   /* height: auto; */
 }
+
+@media (max-width: 912px) {
+  .productlist-ctn {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}

@@ -246,9 +246,6 @@ li {
   .container {
     width: 90%;
   }
-  .productlist-ctn {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
 
   .dashboard-container {
     max-width: 800px;
