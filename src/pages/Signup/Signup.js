@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../../components/ui/Button/Button";
 import Input from "../../components/ui/Input/Input";
 import "./Signup.css";
@@ -41,7 +42,12 @@ function Signup() {
                 className: "authform-input",
               }}
             />
+
             <Button title="Create Account" className="authform-actionbtn" />
+
+            <Link className="authform-link" to={"/auth"}>
+              Already have an account?Login
+            </Link>
           </form>
         </div>
       </div>
