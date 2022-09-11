@@ -28,7 +28,7 @@ function ForgotPass() {
               Create Account
             </Link>
 
-            <Link className="authform-link" to={"signin"} replace>
+            <Link className="authform-link" to={"/auth/signin"} replace>
               Login
             </Link>
           </form>

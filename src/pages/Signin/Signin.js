@@ -40,7 +40,7 @@ function Signin() {
               Create an account
             </Link>
 
-            <Link className="authform-link" to={"forgotpass"} replace>
+            <Link className="authform-link" to={"/auth/forgotpass"} replace>
               Forgot password
             </Link>
           </form>
