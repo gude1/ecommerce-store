@@ -11,16 +11,7 @@ function Signin() {
         <div className="authform-picctn"></div>
         <div className="authform-detailctn">
           <form className="authform" onSubmit={(e) => e.preventDefault()}>
-            <span className="authform-title">Create account</span>
-            <Input
-              placeholder={"Admin"}
-              label={"Full Name"}
-              className="authform-inputctn"
-              labelClassName="authform-input-label"
-              inputProps={{
-                className: "authform-input",
-              }}
-            />
+            <span className="authform-title">Login</span>
             <Input
               placeholder={"***@mail.com"}
               label={"Email"}
@@ -46,7 +37,11 @@ function Signin() {
             <Button title="Create Account" className="authform-actionbtn" />
 
             <Link className="authform-link" to={"/auth"}>
-              Already have an account?Login
+              Create an account
+            </Link>
+
+            <Link className="authform-link" to={"forgotpass"}>
+              Forgot password
             </Link>
           </form>
         </div>

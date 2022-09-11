@@ -45,7 +45,7 @@ function Signup() {
 
             <Button title="Create Account" className="authform-actionbtn" />
 
-            <Link className="authform-link" to={"/auth"}>
+            <Link className="authform-link" to={"signin"}>
               Already have an account?Login
             </Link>
           </form>
