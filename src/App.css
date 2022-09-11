@@ -272,6 +272,7 @@ li {
 .authform-input {
   border-radius: 5px !important;
   background-color: var(--input-bg);
+  padding: 12px !important;
   border-color: transparent !important;
 }
 
@@ -285,6 +286,10 @@ li {
 
 .authform-input:focus {
   outline-color: var(--blue) !important;
+}
+
+.authform-input:focus + .authform-input-label {
+  top: -25% !important;
 }
 
 .authform-link {
