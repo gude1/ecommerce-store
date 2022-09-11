@@ -10,6 +10,7 @@ import DashHome from "./pages/DashHome/DashHome";
 import NavTab from "./components/NavTab/NavTab";
 import Signup from "./pages/Signup/Signup";
 import Signin from "./pages/Signin/Signin";
+import ForgotPass from "./pages/ForgotPass/ForgotPass";
 
 function Wrapper() {
   return (
@@ -55,6 +56,7 @@ function App() {
         <Route path="/auth" element={<AuthWrapper />}>
           <Route index element={<Signup />} />
           <Route path="signin" element={<Signin />} />
+          <Route path="forgotpass" element={<ForgotPass />} />
         </Route>
         <Route path="/dashboard" element={<DashboardWrapper />}>
           <Route index element={<DashHome />} />
