@@ -1,9 +1,6 @@
 import "./App.css";
-import Product from "./components/Product/Product";
-import IconButton from "./components/ui/IconButton/IconButton";
 import { BrowserRouter, Outlet, Routes, Route } from "react-router-dom";
 import MainHeader from "./components/MainHeader/MainHeader";
-import SubHeader from "./components/SubHeader/SubHeader";
 import Home from "./pages/Home/Home";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import Cart from "./pages/Cart/Cart";
@@ -12,6 +9,7 @@ import DashboardHeader from "./components/DashboardHeader/DashboardHeader";
 import DashHome from "./pages/DashHome/DashHome";
 import NavTab from "./components/NavTab/NavTab";
 import Signup from "./pages/Signup/Signup";
+import Signin from "./pages/Signin/Signin";
 
 function Wrapper() {
   return (
@@ -56,6 +54,7 @@ function App() {
       <Routes>
         <Route path="/auth" element={<AuthWrapper />}>
           <Route index element={<Signup />} />
+          <Route path="signin" element={<Signin />} />
         </Route>
         <Route path="/dashboard" element={<DashboardWrapper />}>
           <Route index element={<DashHome />} />

@@ -289,6 +289,7 @@ li {
 
 .authform-link {
   margin: 8px 0px;
+  text-decoration: none;
   color: var(--blue);
 }
 

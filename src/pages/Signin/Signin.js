@@ -34,13 +34,13 @@ function Signin() {
               }}
             />
 
-            <Button title="Create Account" className="authform-actionbtn" />
+            <Button title="Login" className="authform-actionbtn" />
 
             <Link className="authform-link" to={"/auth"}>
               Create an account
             </Link>
 
-            <Link className="authform-link" to={"forgotpass"}>
+            <Link className="authform-link" to={"forgotpass"} replace>
               Forgot password
             </Link>
           </form>
