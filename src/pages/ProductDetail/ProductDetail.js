@@ -5,7 +5,6 @@ import Button from "../../components/ui/Button/Button";
 import CounterInput from "../../components/ui/CounterInput/CounterInput";
 import { Console } from "../../utils";
 import "./ProductDetail.css";
-Console.warn(window.location);
 
 export default function ProductDetail() {
   const navigate = useNavigate();
