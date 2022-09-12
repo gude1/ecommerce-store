@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/ui/Button/Button";
 import Input from "../../components/ui/Input/Input";
+import { Store } from "../../context";
+import { Console } from "../../utils";
 import "./Signup.css";
 
 function Signup() {
+  const { dispatch, state } = useContext(Store);
   return (
     <div className="auth-ctn slideInUp">
       <div className="authform-ctn">
