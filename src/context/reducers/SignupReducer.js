@@ -10,7 +10,7 @@ import {
 const INITIAL_STATE = {
   inputs: {},
   errors: {},
-  processing: false,
+  submitting: false,
 };
 
 const handleProcessing = (key, value, state) => {
@@ -19,7 +19,7 @@ const handleProcessing = (key, value, state) => {
   }
   switch (key) {
     case "signupprocessing":
-      return { ...state, processing: value };
+      return { ...state, submitting: value };
     default:
       return state;
   }

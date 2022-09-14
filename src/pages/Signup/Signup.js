@@ -3,11 +3,17 @@ import { Link } from "react-router-dom";
 import Button from "../../components/ui/Button/Button";
 import Input from "../../components/ui/Input/Input";
 import { Store } from "../../context";
+import {
+  setSignupErrors,
+  setSignupInputs,
+  signupUser,
+} from "../../context/actions/signupform";
 import { Console } from "../../utils";
 import "./Signup.css";
 
 function Signup() {
   const { dispatch, state } = useContext(Store);
+  const { signupform } = state;
   return (
     <div className="auth-ctn slideInUp">
       <div className="authform-ctn">
@@ -22,6 +28,24 @@ function Signup() {
               labelClassName="authform-input-label"
               inputProps={{
                 className: "authform-input",
+                minLength: 2,
+                onChange: (e) => {
+                  dispatch(
+                    setSignupInputs({
+                      firstname: "",
+                      formerr: "",
+                    })
+                  );
+                  dispatch(
+                    setSignupErrors({
+                      firstname: e.target.value,
+                    })
+                  );
+                },
+                value: signupform?.inputs?.firstname || "",
+                name: "firstname",
+                maxLength: 20,
+                required: true,
               }}
             />
             <Input
@@ -32,6 +56,23 @@ function Signup() {
               inputProps={{
                 className: "authform-input",
                 type: "email",
+                minLength: 8,
+                onChange: (e) => {
+                  dispatch(
+                    setSignupErrors({
+                      email: "",
+                      formerr: "",
+                    })
+                  );
+                  dispatch(
+                    setSignupInputs({
+                      email: e.target.value,
+                    })
+                  );
+                },
+                value: signupform?.inputs?.email || "",
+                name: "email",
+                required: true,
               }}
             />
 
@@ -43,10 +84,34 @@ function Signup() {
               labelClassName="authform-input-label"
               inputProps={{
                 className: "authform-input",
+                minLength: 8,
+                onChange: (e) => {
+                  dispatch(
+                    setSignupErrors({
+                      password: "",
+                      formerr: "",
+                    })
+                  );
+                  dispatch(
+                    setSignupInputs({
+                      password: e.target.value,
+                    })
+                  );
+                },
+                value: signupform?.inputs?.password || "",
+                name: "password",
+                required: true,
               }}
             />
 
-            <Button title="Create Account" className="authform-actionbtn" />
+            <Button
+              loading={signupform?.submitting}
+              buttonProps={{
+                onClick: () => dispatch(signupUser()),
+              }}
+              title="Create Account"
+              className="authform-actionbtn"
+            />
 
             <Link className="authform-link" to={"signin"}>
               Already have an account?Login
