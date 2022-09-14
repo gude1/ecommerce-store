@@ -27,7 +27,7 @@ export const signupUser = () => {
         setSignupErrors({
           formerr: "",
           passsword: "",
-          fullname: "",
+          name: "",
           email: "",
         })
       );
@@ -41,15 +41,14 @@ export const signupUser = () => {
       }
 
       if (
-        isEmpty(signupform?.inputs?.fullname) ||
-        /\d/.test(signupform?.inputs?.fullname) ||
-        signupform?.inputs?.fullname.length < 3 ||
-        signupform?.inputs?.fullname.length > 20
+        isEmpty(signupform?.inputs?.name) ||
+        /\d/.test(signupform?.inputs?.name) ||
+        signupform?.inputs?.name.length < 3 ||
+        signupform?.inputs?.name.length > 20
       ) {
         input_errs = {
           ...input_errs,
-          fullname:
-            "Full name is required, must be letters and be between 3-20 characters",
+          name: "Full name is required, must be letters and be between 3-20 characters",
         };
       }
 
@@ -80,10 +79,12 @@ export const signupUser = () => {
         return;
       }
 
-      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/`, {
-        ...signupform?.inputs,
-        referred_by: signupform?.inputs?.referred_by || null,
-      });
+      const response = await axios.post(
+        `${process.env.REACT_APP_BASE_URL}/api/auth/signup`,
+        {
+          ...signupform?.inputs,
+        }
+      );
 
       Console.warn("response", response.data);
       dispatch(setProcessing("signupsubmit", false));

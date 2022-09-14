@@ -32,18 +32,18 @@ function Signup() {
                 onChange: (e) => {
                   dispatch(
                     setSignupInputs({
-                      firstname: "",
+                      name: "",
                       formerr: "",
                     })
                   );
                   dispatch(
                     setSignupErrors({
-                      firstname: e.target.value,
+                      name: e.target.value,
                     })
                   );
                 },
-                value: signupform?.inputs?.firstname || "",
-                name: "firstname",
+                value: signupform?.inputs?.name || "",
+                name: "fullname",
                 maxLength: 20,
                 required: true,
               }}
