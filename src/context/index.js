@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { combineReducers } from "../utils";
 import AdminReducer from "./reducers/AdminReducer";
 import SignupReducer from "./reducers/SignupReducer";
