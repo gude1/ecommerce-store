@@ -56,6 +56,7 @@ function Signup() {
                 required: true,
               }}
             />
+
             <Input
               placeholder={"***@mail.com"}
               label={"Email"}

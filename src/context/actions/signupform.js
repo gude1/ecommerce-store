@@ -110,7 +110,7 @@ export const signupUser = (onSuccess, onFail) => {
         dispatch(
           setSignupErrors({
             ...err?.response.data?.errors,
-            formerr: "Request failed please try again",
+            formerr: "Request failed please check your inputs and try again",
           })
         );
         onFail && onFail();
