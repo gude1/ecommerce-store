@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/ui/Button/Button";
 import Input from "../../components/ui/Input/Input";
 import { Store } from "../../context";
@@ -13,6 +13,7 @@ import "./Signup.css";
 
 function Signup() {
   const { dispatch, state } = useContext(Store);
+  const navigate = useNavigate();
   const { signupform } = state;
   return (
     <div className="auth-ctn slideInUp">
@@ -23,7 +24,7 @@ function Signup() {
             className="authform"
             onSubmit={(e) => {
               e.preventDefault();
-              dispatch(signupUser());
+              dispatch(signupUser(() => navigate("/auth/signin")));
             }}
           >
             <span className="authform-title">Create account</span>
