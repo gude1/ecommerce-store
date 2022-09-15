@@ -1,5 +1,8 @@
-import { Console } from "../../utils";
+import { Console, isEmpty } from "../../utils";
 import { SET_SIGNUP_ERRORS, SET_SIGNUP_INPUTS } from "../actiontypes";
+import axios from "axios";
+import swal from "sweetalert";
+import { setProcessing, setReset } from ".";
 
 export const setSignupInputs = (data = {}) => {
   return {
@@ -15,7 +18,7 @@ export const setSignupErrors = (data = {}) => {
   };
 };
 
-export const signupUser = () => {
+export const signupUser = (onSuccess, onFail) => {
   return async (dispatch, state) => {
     const { signupform } = state;
     try {
@@ -31,7 +34,7 @@ export const signupUser = () => {
           email: "",
         })
       );
-      dispatch(setProcessing("signupsubmit", true));
+      dispatch(setProcessing("signupprocessing", true));
 
       if (isEmpty(signupform)) {
         input_errs = {
@@ -79,32 +82,39 @@ export const signupUser = () => {
         return;
       }
 
+      console.warn(signupform.inputs);
       const response = await axios.post(
-        `${process.env.REACT_APP_BASE_URL}/api/auth/signup`,
-        {
-          ...signupform?.inputs,
-        }
+        `http://localhost:4000/api/auth/signup`,
+        signupform?.inputs
       );
 
-      Console.warn("response", response.data);
-      dispatch(setProcessing("signupsubmit", false));
-      toast(
-        "Signup success!, please check your mail to complete your verification",
-        { ...REACT_TOAST_SUCCESS_OPTIONS, autoClose: false }
-      );
-      dispatch(setReset("signupform"));
+      dispatch(setProcessing("signupprocessing", false));
+      swal("Signup Successs!", "", "success").then((res) => {
+        dispatch(setReset("signupform"));
+        onSuccess && onSuccess();
+      });
     } catch (err) {
-      if (String(err)?.indexOf("Network Error") > -1) {
+      Console.warn("signupform err", err?.response?.data);
+      dispatch(setProcessing("signupprocessing", false));
+      swal("Signup Failed!", "", "error").then((res) => {
+        if (String(err)?.indexOf("Network Error") > -1) {
+          dispatch(
+            setSignupErrors({
+              formerr: "Network or server error, please try again",
+            })
+          );
+          onFail && onFail();
+          return;
+        }
+
         dispatch(
           setSignupErrors({
-            formerr: "Network or server error, please try again",
+            ...err?.response.data?.errors,
+            formerr: "Request failed please try again",
           })
         );
-        Console.warn("signupUser response", err?.response?.status);
-        dispatch(setProcessing("signupsubmit", false));
-        return;
-      }
-      dispatch(setProcessing("signupsubmit", false));
+        onFail && onFail();
+      });
     }
   };
 };

@@ -292,6 +292,13 @@ li {
   top: -25% !important;
 }
 
+.authform-errtxt {
+  color: var(--red);
+  font-family: Sora-Medium;
+  margin: 8px 0px;
+  align-self: center;
+}
+
 .authform-link {
   margin: 8px 0px;
   text-decoration: none;

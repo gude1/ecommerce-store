@@ -19,25 +19,32 @@ function Signup() {
       <div className="authform-ctn">
         <div className="authform-picctn"></div>
         <div className="authform-detailctn">
-          <form className="authform" onSubmit={(e) => e.preventDefault()}>
+          <form
+            className="authform"
+            onSubmit={(e) => {
+              e.preventDefault();
+              dispatch(signupUser());
+            }}
+          >
             <span className="authform-title">Create account</span>
             <Input
               placeholder={"Admin"}
               label={"Full Name"}
               className="authform-inputctn"
               labelClassName="authform-input-label"
+              error={signupform?.errors?.name}
               inputProps={{
                 className: "authform-input",
                 minLength: 2,
                 onChange: (e) => {
                   dispatch(
-                    setSignupInputs({
+                    setSignupErrors({
                       name: "",
                       formerr: "",
                     })
                   );
                   dispatch(
-                    setSignupErrors({
+                    setSignupInputs({
                       name: e.target.value,
                     })
                   );
@@ -52,6 +59,7 @@ function Signup() {
               placeholder={"***@mail.com"}
               label={"Email"}
               className="authform-inputctn"
+              error={signupform?.errors?.email}
               labelClassName="authform-input-label"
               inputProps={{
                 className: "authform-input",
@@ -80,6 +88,7 @@ function Signup() {
               placeholder={"********"}
               label={"Password"}
               type="password"
+              error={signupform?.errors?.password}
               className="authform-inputctn"
               labelClassName="authform-input-label"
               inputProps={{
@@ -106,12 +115,15 @@ function Signup() {
 
             <Button
               loading={signupform?.submitting}
-              buttonProps={{
-                onClick: () => dispatch(signupUser()),
-              }}
               title="Create Account"
               className="authform-actionbtn"
             />
+
+            {signupform?.errors?.formerr && (
+              <span className="authform-errtxt">
+                {signupform?.errors?.formerr}
+              </span>
+            )}
 
             <Link className="authform-link" to={"signin"}>
               Already have an account?Login

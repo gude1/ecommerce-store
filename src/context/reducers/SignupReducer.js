@@ -32,7 +32,7 @@ const reducer = (state, action) => {
     case SET_SIGNUP_ERRORS:
       return { ...state, errors: { ...state.errors, ...action.payload } };
     case RESET:
-      return action.payload == "adminreducer" ? INITIAL_STATE : state;
+      return action.payload == "signupreducer" ? INITIAL_STATE : state;
     case PROCESSING:
       return handleProcessing(action.payload.key, action.payload.value, state);
     case LOG_OUT:
