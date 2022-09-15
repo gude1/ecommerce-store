@@ -12,6 +12,12 @@ export const SET_SIGNUP_INPUTS = "set_signup_inputs";
 export const SET_SIGNUP_ERRORS = "set_signup_errors";
 
 /**
+ * SIGNIN REDUCER
+ */
+export const SET_SIGNIN_INPUTS = "set_signin_inputs";
+export const SET_SIGNIN_ERRORS = "set_signin_errors";
+
+/**
  * ADMIN REDUCER
  */
 

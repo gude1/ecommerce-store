@@ -56,18 +56,13 @@ export function setCookie(cname, cvalue, exdays = 3) {
   const d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
   let expires = "expires=" + d.toUTCString();
-  if (window.location.origin.includes("boxin.ng")) {
-    document.cookie =
-      cname + "=" + cvalue + ";" + expires + `; path=/; domain=boxin.ng`;
-  } else {
-    document.cookie =
-      cname +
-      "=" +
-      cvalue +
-      ";" +
-      expires +
-      `; path=/; domain=${window.location.hostname}`;
-  }
+  document.cookie =
+    cname +
+    "=" +
+    cvalue +
+    ";" +
+    expires +
+    `; path=/; domain=${window.location.hostname}`;
 }
 
 export function getCookie(cname, cookie) {
