@@ -45,32 +45,30 @@ export const logUserIn = (onSuccess, onFail) => {
         signinform?.inputs
       );
 
-      const decoded = jwtDecode(response?.data?.data?.access);
+      const res = response?.data;
 
-      Console.warn(decoded);
-      return;
+      const decoded = jwtDecode(res?.data?.access);
 
-      if (!response?.data?.access || !response?.data?.refresh || !decoded) {
+      if (!res?.data?.access || !res?.data?.refresh || !decoded) {
         dispatch(
           setSigninErrors({
             formerr: "Something went wrong with signin, please try again",
           })
         );
-        Console.warn("logUser no access");
         return;
       }
 
-      setCookie("id1", response?.data?.access, 0.00347222);
-      setCookie("id2", response?.data?.refresh, 3);
-      Console.warn("decoded", decoded);
+      setCookie("id1", res?.data?.access, 0.00347222);
+      setCookie("id2", res?.data?.refresh, 3);
       dispatch(
         updateAdmin({
           ...decoded,
         })
       );
-      dispatch(setReset("signinform"));
-      onSuccess && onSuccess();
-      Console.warn("logUserIn", response.data.access);
+      swal("Login Successs!", "", "success").then((res) => {
+        dispatch(setReset("signinform"));
+        onSuccess && onSuccess();
+      });
     } catch (err) {
       Console.warn("logUserIn err", String(err));
       Console.warn("logUserIn err", err?.response?.data);
@@ -84,7 +82,7 @@ export const logUserIn = (onSuccess, onFail) => {
         dispatch(
           setSigninErrors({
             formerr:
-              err?.response?.data?.detail ||
+              err?.response?.data?.error ||
               "Request failed, please check your inputs and try again",
           })
         );
