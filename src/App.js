@@ -11,6 +11,7 @@ import NavTab from "./components/NavTab/NavTab";
 import Signup from "./pages/Signup/Signup";
 import Signin from "./pages/Signin/Signin";
 import ForgotPass from "./pages/ForgotPass/ForgotPass";
+import CreateStore from "./pages/CreateStore/CreateStore";
 
 function Wrapper() {
   return (
@@ -57,6 +58,7 @@ function App() {
           <Route index element={<Signup />} />
           <Route path="signin" element={<Signin />} />
           <Route path="forgotpass" element={<ForgotPass />} />
+          <Route path="createstore" element={<CreateStore />} />
         </Route>
         <Route path="/dashboard" element={<DashboardWrapper />}>
           <Route index element={<DashHome />} />

@@ -59,7 +59,7 @@ export const logUserIn = (onSuccess, onFail) => {
       }
 
       setCookie("id1", res?.data?.access, 0.00347222);
-      setCookie("id2", res?.data?.refresh, 3);
+      setCookie("id2", res?.data?.refresh, 1);
       dispatch(
         updateAdmin({
           ...decoded,

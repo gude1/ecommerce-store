@@ -23,7 +23,7 @@ function Signin() {
             className="authform"
             onSubmit={(e) => {
               e.preventDefault();
-              dispatch(logUserIn());
+              dispatch(logUserIn(() => navigate("/auth/createstore")));
             }}
           >
             <span className="authform-title">Login</span>
