@@ -1,9 +1,15 @@
-import { Console, isEmpty, setCookie } from "../../utils";
+import {
+  Console,
+  deleteCookie,
+  getCookie,
+  isEmpty,
+  setCookie,
+} from "../../utils";
 import { SET_SIGNIN_ERRORS, SET_SIGNIN_INPUTS } from "../actiontypes";
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 import swal from "sweetalert";
-import { setProcessing, setReset } from ".";
+import { logOut, setProcessing, setReset } from ".";
 import { BASE_URL } from "../../constants";
 import { updateAdmin } from "./admin";
 
@@ -58,7 +64,7 @@ export const logUserIn = (onSuccess, onFail) => {
         return;
       }
 
-      setCookie("id1", res?.data?.access, 0.00347222);
+      setCookie("id1", res?.data?.access, 1);
       setCookie("id2", res?.data?.refresh, 1);
       dispatch(
         updateAdmin({
@@ -89,6 +95,59 @@ export const logUserIn = (onSuccess, onFail) => {
       }
       dispatch(setProcessing("signinprocessing", false));
       onFail && onFail();
+    }
+  };
+};
+
+export const logUserOut = () => {
+  return async (dispatch, state) => {
+    try {
+      deleteCookie("id1");
+      deleteCookie("id2");
+      dispatch(logOut());
+    } catch (err) {
+      Console.warn(`logUserOut`, String(err));
+    }
+  };
+};
+
+export const refreshAccessToken = (okAction, failedAction) => {
+  let retrycount = 0;
+  return async (dispatch, state) => {
+    try {
+      let refresh = getCookie("id2");
+      if (isEmpty(refresh)) {
+        dispatch(logUserOut());
+        failedAction && failedAction();
+        return;
+      }
+      const response = await axios.post(`${BASE_URL}/auth/refreshtoken`, {
+        refresh,
+      });
+      const { data, success } = response?.data;
+
+      if (data?.access) {
+        setCookie("id1", data?.access);
+        okAction && okAction();
+      }
+      Console.warn("refreshAccessToken", data);
+    } catch (err) {
+      Console.warn("refreshAccessToken err", String(err));
+      Console.warn("refreshAccessToken err", err?.response);
+      if (
+        String(err).indexOf("Network Error") > -1 ||
+        err?.response?.status == 500
+      ) {
+        if (retrycount <= 5) {
+          ++retrycount;
+          dispatch(refreshAccessToken());
+        } else {
+          retrycount = 0;
+        }
+        return;
+      }
+      dispatch(logUserOut());
+      failedAction && failedAction();
     }
   };
 };

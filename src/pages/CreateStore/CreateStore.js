@@ -1,10 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/ui/Button/Button";
 import Input from "../../components/ui/Input/Input";
+import { Store } from "../../context";
+import { Console } from "../../utils";
 import "./CreateStore.css";
 
 function CreateStore() {
+  const { dispatch, state } = useContext(Store);
+  const navigate = useNavigate();
+  const { admin } = state;
+  console.warn("admin", admin);
+
   return (
     <div className="auth-ctn slideInUp">
       <div className="authform-ctn">

@@ -1,6 +1,3 @@
-// import { toast } from "react-toastify";
-// import { REACT_TOAST_SUCCESS_OPTIONS } from "../constants";
-
 export function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return {
