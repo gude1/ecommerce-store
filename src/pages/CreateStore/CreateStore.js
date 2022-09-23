@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/ui/Button/Button";
 import Input from "../../components/ui/Input/Input";
@@ -12,6 +12,7 @@ import "./CreateStore.css";
 
 function CreateStore() {
   const { dispatch, state } = useContext(Store);
+  const storelogoinputref = useRef();
   const navigate = useNavigate();
   const { createstoreform } = state;
 
@@ -20,17 +21,41 @@ function CreateStore() {
       <div className="authform-ctn">
         <div className="authform-picctn"></div>
         <div className="authform-detailctn">
-          <form className="authform" onSubmit={(e) => e.preventDefault()}>
+          <form
+            className="authform"
+            onSubmit={(e) => {
+              e.preventDefault();
+              Console.warn(createstoreform);
+            }}
+          >
             <span className="authform-title">Store Info</span>
             <Input
               label="Store Name"
               placeholder={"Nixmar & swag"}
               type={"text"}
+              error={createstoreform?.errors?.name}
               className="authform-inputctn"
               labelClassName="authform-input-label"
               inputProps={{
                 className: "authform-input",
-                name: "bussinessname",
+                name: "storename",
+                minLength: 3,
+                maxLength: 20,
+                onChange: (e) => {
+                  dispatch(
+                    setCreateStoreErrors({
+                      name: "",
+                      formerr: "",
+                    })
+                  );
+                  dispatch(
+                    setCreateStoreInputs({
+                      name: e.target.value,
+                    })
+                  );
+                },
+                value: createstoreform?.inputs?.name || "",
+                required: true,
               }}
             />
 
@@ -54,11 +79,11 @@ function CreateStore() {
                   );
                   dispatch(
                     setCreateStoreInputs({
-                      businessaddr: e.target.value,
+                      description: e.target.value,
                     })
                   );
                 },
-                value: createstoreform?.inputs?.businessaddr || "",
+                value: createstoreform?.inputs?.description || "",
                 name: "storedesc",
                 required: true,
               }}
@@ -67,12 +92,24 @@ function CreateStore() {
             <Input
               label="Bussiness State"
               type={"file"}
+              error={createstoreform?.errors?.logo}
               placeholder={"Nixmar & swag"}
               className="authform-inputctn"
               labelClassName="authform-input-label"
               inputProps={{
                 className: "authform-input",
+                ref: storelogoinputref,
+                name: "storelogo",
                 accept: "image/jpeg,image/jpg,image/png",
+                onChange: (e) => {
+                  dispatch(setCreateStoreInputs({ logo: e?.target?.files[0] }));
+                  dispatch(
+                    setCreateStoreErrors({
+                      formerr: "",
+                      logo: "",
+                    })
+                  );
+                },
               }}
             />
 
