@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/ui/Button/Button";
 import Input from "../../components/ui/Input/Input";
 import { Store } from "../../context";
@@ -8,7 +8,6 @@ import {
   setCreateStoreErrors,
   setCreateStoreInputs,
 } from "../../context/actions/createstoreform";
-import { Console } from "../../utils";
 import "./CreateStore.css";
 
 function CreateStore() {

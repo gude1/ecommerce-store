@@ -66,8 +66,7 @@ export const createAStore = (onSuccess, onFail) => {
       dispatch(
         setCreateStoreErrors({
           formerr:
-            err?.response?.data?.error ||
-            "Something went wrong please try again",
+            "Something went wrong please check your inputs and try again",
         })
       );
       onFail && onFail();
