@@ -4,6 +4,7 @@ import Button from "../../components/ui/Button/Button";
 import Input from "../../components/ui/Input/Input";
 import { Store } from "../../context";
 import {
+  createAStore,
   setCreateStoreErrors,
   setCreateStoreInputs,
 } from "../../context/actions/createstoreform";
@@ -25,7 +26,12 @@ function CreateStore() {
             className="authform"
             onSubmit={(e) => {
               e.preventDefault();
-              Console.warn(createstoreform);
+              dispatch(
+                createAStore(() => {
+                  storelogoinputref.current.value = "";
+                  navigate("/dashboard", { replace: true });
+                })
+              );
             }}
           >
             <span className="authform-title">Store Info</span>
@@ -92,28 +98,41 @@ function CreateStore() {
             <Input
               label="Bussiness State"
               type={"file"}
-              error={createstoreform?.errors?.logo}
+              error={createstoreform?.errors?.image}
               placeholder={"Nixmar & swag"}
               className="authform-inputctn"
               labelClassName="authform-input-label"
               inputProps={{
                 className: "authform-input",
                 ref: storelogoinputref,
+                required: true,
                 name: "storelogo",
                 accept: "image/jpeg,image/jpg,image/png",
                 onChange: (e) => {
-                  dispatch(setCreateStoreInputs({ logo: e?.target?.files[0] }));
+                  dispatch(
+                    setCreateStoreInputs({ image: e?.target?.files[0] })
+                  );
                   dispatch(
                     setCreateStoreErrors({
                       formerr: "",
-                      logo: "",
+                      image: "",
                     })
                   );
                 },
               }}
             />
 
-            <Button title="Submit" className="authform-actionbtn" />
+            {createstoreform?.errors?.formerr && (
+              <span className="authform-errtxt">
+                {createstoreform?.errors?.formerr}
+              </span>
+            )}
+
+            <Button
+              title="Submit"
+              className="authform-actionbtn"
+              loading={createstoreform?.submitting}
+            />
           </form>
         </div>
       </div>

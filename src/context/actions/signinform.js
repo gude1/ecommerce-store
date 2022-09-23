@@ -50,9 +50,7 @@ export const logUserIn = (onSuccess, onFail) => {
         `${BASE_URL}/auth/login`,
         signinform?.inputs
       );
-
       const res = response?.data;
-
       const decoded = jwtDecode(res?.data?.access);
 
       if (!res?.data?.access || !res?.data?.refresh || !decoded) {

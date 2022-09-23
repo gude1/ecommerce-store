@@ -27,3 +27,8 @@ export const SET_CREATESTORE_ERRORS = "set_createstore_errors";
  * ADMIN REDUCER
  */
 export const UPDATE_ADMIN = "update_admin";
+
+/**
+ * STORE REDUCER
+ */
+export const UPDATE_STORE = "update_store";
