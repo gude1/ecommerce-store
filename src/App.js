@@ -45,7 +45,7 @@ function DashboardWrapper() {
 
   useEffect(() => {
     checkPath();
-  }, [window.location.pathname]);
+  }, [location.pathname]);
 
   function checkPath() {
     let access = getCookie("id1");

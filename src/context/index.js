@@ -1,6 +1,7 @@
 import React from "react";
 import { combineReducers } from "../utils";
 import AdminReducer from "./reducers/AdminReducer";
+import CreateStoreReducer from "./reducers/CreateStoreReducer";
 import SigninReducer from "./reducers/SigninReducer";
 import SignupReducer from "./reducers/SignupReducer";
 
@@ -10,6 +11,7 @@ export const initialState = {
   admin: AdminReducer.INITIAL_STATE,
   signupform: SignupReducer.INITIAL_STATE,
   signinform: SigninReducer.INITIAL_STATE,
+  createstoreform: CreateStoreReducer.INITIAL_STATE,
 };
 
 export function StoreProvider(props) {
@@ -22,6 +24,10 @@ export function StoreProvider(props) {
     signinform: React.useReducer(
       SigninReducer.reducer,
       SigninReducer.INITIAL_STATE
+    ),
+    createstoreform: React.useReducer(
+      CreateStoreReducer.reducer,
+      CreateStoreReducer.INITIAL_STATE
     ),
   });
 

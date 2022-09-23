@@ -33,10 +33,11 @@
 
 :root {
   /* --bg-color: #e9ecef; */
+  /* --bg-color: rgb(231, 212, 193); */
   /* --bg-color: #f9fafb; */
+  /* --bg-color: rgb(245, 248, 252); */
   --bg-color: rgb(241 245 249);
   --opaque: hsla(0, 0%, 96.5%, 0.6);
-  /* --bg-color: rgb(231, 212, 193); */
   --bg-white: #fff;
   --white: #fff;
   /* --bg-white: rgb(231, 212, 193); */
@@ -51,6 +52,26 @@
   --bg-gray: #f1f3f4;
   --input-bg: rgb(243 244 246);
   height: 100%;
+}
+
+::-webkit-file-upload-button {
+  background: #4764e6;
+  color: #ffffff;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  outline: 0;
+  font-size: 10px;
+  line-height: normal;
+  transition: all 1s;
+  font-family: Sora-Regular;
+  padding: 1em;
+}
+
+::-webkit-file-upload-button:hover {
+  background-color: inherit;
+  border: 1px solid rgba(138, 138, 160, 1);
+  color: #3e3e3e;
 }
 
 *,
