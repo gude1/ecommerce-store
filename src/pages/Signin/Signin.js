@@ -26,9 +26,10 @@ function Signin() {
               e.preventDefault();
               dispatch(
                 logUserIn(() => {
-                  let path = !getCookie("has_store")
-                    ? "/auth/createstore"
-                    : "/dashboard";
+                  let path =
+                    getCookie("has_store") == 0
+                      ? "/auth/createstore"
+                      : "/dashboard";
                   navigate(path, { replace: true });
                 })
               );

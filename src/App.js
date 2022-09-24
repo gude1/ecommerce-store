@@ -1,14 +1,15 @@
-import "./App.css";
 import {
   BrowserRouter,
   Outlet,
   Routes,
+  ScrollRestoration,
   Route,
   useLocation,
   useNavigate,
 } from "react-router-dom";
 import MainHeader from "./components/MainHeader/MainHeader";
 import Home from "./pages/Home/Home";
+import "./App.css";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import Cart from "./pages/Cart/Cart";
 import Search from "./pages/Search/Search";
@@ -50,13 +51,15 @@ function DashboardWrapper() {
   function checkPath() {
     let access = getCookie("id1");
     access = isEmpty(access) ? null : jwtDecode(access);
+
     if (!access) {
       navigate("/auth/signin", { replace: true });
       return;
     }
 
-    if (!getCookie("has_store")) {
+    if (getCookie("has_store") == 0) {
       navigate("/auth/createstore", { replace: true });
+      return;
     }
   }
 
@@ -92,9 +95,7 @@ function AuthWrapper() {
       "/auth/forgotpass",
       "/auth/forgotpass/",
     ];
-
-    let protected_paths = ["/createstore", "/createstore/"];
-
+    let protected_paths = ["/auth/createstore", "/auth/createstore/"];
     let access = getCookie("id1");
     let path = location.pathname;
 
@@ -102,13 +103,17 @@ function AuthWrapper() {
       navigate("/dashboard", { replace: true });
       return;
     }
-
     if (
       protected_paths.includes(path) &&
       (isEmpty(access) || !jwtDecode(access))
     ) {
       navigate("/auth/signin", { replace: true });
       return;
+    }
+
+    if (getCookie("has_store") == 1) {
+      navigate("/dashboard", { replace: true });
+      return null;
     }
   }
 
@@ -119,6 +124,32 @@ function AuthWrapper() {
       </div>
     </div>
   );
+}
+
+function Redirect() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setup();
+  }, []);
+
+  function setup() {
+    let access = getCookie("id1");
+    access = isEmpty(access) ? null : jwtDecode(access);
+
+    if (!access) {
+      navigate("/auth/signin", { replace: true });
+      return null;
+    }
+    if (getCookie("has_store") == 0) {
+      navigate("/auth/createstore", { replace: true });
+      return null;
+    }
+    if (getCookie("has_store") == 1) {
+      navigate("/dashboard", { replace: true });
+      return null;
+    }
+  }
 }
 
 function App() {
@@ -152,6 +183,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Redirect />} />
         <Route path="/auth" element={<AuthWrapper />}>
           <Route index element={<Signup />} />
           <Route path="signin" element={<Signin />} />

@@ -52,7 +52,7 @@ export const createAStore = (onSuccess, onFail) => {
       const response = await axios.post(`${BASE_URL}/store`, formData, options);
       const res = response?.data;
       dispatch(updateStore({ ...res?.data?.store }));
-      setCookie("has_store", true, 1);
+      setCookie("has_store", 1);
       swal("Store Created!", "", "success").then((res) => {
         dispatch(setReset("createstoreform"));
         onSuccess && onSuccess();
