@@ -68,6 +68,7 @@ function DashHome() {
             title="Total Orders"
           />
         </div>
+
         <div className="dashboard-graph-ctn">
           <div
             className="flex-row"
@@ -157,6 +158,32 @@ function DashHome() {
               />
             </AreaChart>
           </ResponsiveContainer>
+        </div>
+
+        <div className="dashboard-orderdetails-ctn">
+          <h3 className="">Recent Orders</h3>
+          <div className="custom-table-wrapper">
+            <table className="custom-table">
+              <tr className="custom-table-header">
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+                <th>Country</th>
+              </tr>
+              <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+                <td>Germany</td>
+              </tr>
+              <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+                <td>Germany</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     </div>

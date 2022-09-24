@@ -42,7 +42,7 @@
   --bg-white: #fff;
   --white: #fff;
   /* --bg-white: rgb(231, 212, 193); */
-  --blue: #4764e6;
+  --blue: rgb(71, 100, 230);
   --green: #0e9f6e;
   --icon-color: #000;
   --black: #000;
@@ -52,6 +52,7 @@
   --light-gray: #d5d6d7;
   --bg-gray: #f1f3f4;
   --input-bg: rgb(243 244 246);
+  --border-color:rgb(229 231 235);
   height: 100%;
 }
 
