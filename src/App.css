@@ -37,6 +37,7 @@
   /* --bg-color: #f9fafb; */
   /* --bg-color: rgb(245, 248, 252); */
   --bg-color: rgb(241 245 249);
+  --z-low:10,
   --opaque: hsla(0, 0%, 96.5%, 0.6);
   --bg-white: #fff;
   --white: #fff;
