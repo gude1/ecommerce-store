@@ -64,6 +64,7 @@ export const logUserIn = (onSuccess, onFail) => {
 
       setCookie("id1", res?.data?.access, 1);
       setCookie("id2", res?.data?.refresh, 1);
+      setCookie("has_store", decoded?.has_store, 1);
       dispatch(
         updateAdmin({
           ...decoded,
@@ -123,9 +124,10 @@ export const refreshAccessToken = (okAction, failedAction) => {
         refresh,
       });
       const { data, success } = response?.data;
-
-      if (data?.access) {
+      let decoded = isEmpty(data?.access) ? null : jwtDecode(data?.access);
+      if (decoded) {
         setCookie("id1", data?.access);
+        setCookie("has_store", decoded?.has_store);
         okAction && okAction();
       }
       Console.warn("refreshAccessToken", data);

@@ -3,17 +3,34 @@ import { ProgressBar } from "react-loader-spinner";
 import "./PageLoader.css";
 
 function PageLoader() {
+  let Listener = null;
   useLayoutEffect(() => {
-    const Listener = window.addEventListener("load", (event) => {
+    if (document.readyState === "complete") {
       setTimeout(() => {
         document.getElementById("page-loader-wrapper").style.opacity = "0";
       }, 1000);
-    });
+    } else {
+      Listener = window.addEventListener("load", (event) => {
+        setTimeout(() => {
+          document.getElementById("page-loader-wrapper").style.opacity = "0";
+        }, 1000);
+      });
+    }
+
+    const watchLoaderTransistion = document
+      .getElementById("page-loader-wrapper")
+      .addEventListener("transitionend", () => {
+        document.getElementById("page-loader-wrapper").style.display = "none";
+      });
 
     return () => {
-      window.removeEventListener("load", Listener);
+      Listener && window.removeEventListener("load", Listener);
+      document
+        .getElementById("page-loader-wrapper")
+        .removeEventListener("transitionend", watchLoaderTransistion);
     };
   }, []);
+
   return (
     <div id="page-loader-wrapper">
       <ProgressBar

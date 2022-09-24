@@ -49,7 +49,7 @@ export const Console =
     ? { warn: emptyFunc, log: emptyFunc, error: emptyFunc }
     : console;
 
-export function setCookie(cname, cvalue, exdays = 3) {
+export function setCookie(cname, cvalue, exdays = 1) {
   const d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
   let expires = "expires=" + d.toUTCString();

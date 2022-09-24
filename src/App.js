@@ -49,9 +49,14 @@ function DashboardWrapper() {
 
   function checkPath() {
     let access = getCookie("id1");
-    if (isEmpty(access) || !jwtDecode(access)) {
+    access = isEmpty(access) ? null : jwtDecode(access);
+    if (!access) {
       navigate("/auth/signin", { replace: true });
       return;
+    }
+
+    if (!getCookie("has_store")) {
+      navigate("/auth/createstore", { replace: true });
     }
   }
 

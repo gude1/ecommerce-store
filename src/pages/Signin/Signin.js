@@ -8,6 +8,7 @@ import {
   setSigninErrors,
   setSigninInputs,
 } from "../../context/actions/signinform";
+import { getCookie } from "../../utils";
 import "./Signin.css";
 
 function Signin() {
@@ -23,7 +24,14 @@ function Signin() {
             className="authform"
             onSubmit={(e) => {
               e.preventDefault();
-              dispatch(logUserIn(() => navigate("/auth/createstore")));
+              dispatch(
+                logUserIn(() => {
+                  let path = !getCookie("has_store")
+                    ? "/auth/createstore"
+                    : "/dashboard";
+                  navigate(path, { replace: true });
+                })
+              );
             }}
           >
             <span className="authform-title">Login</span>

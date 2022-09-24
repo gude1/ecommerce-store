@@ -2,7 +2,7 @@ import axios from "axios";
 import swal from "sweetalert";
 import { setProcessing, setReset } from ".";
 import { BASE_URL } from "../../constants";
-import { getCookie } from "../../utils";
+import { getCookie, setCookie } from "../../utils";
 import { SET_CREATESTORE_ERRORS, SET_CREATESTORE_INPUTS } from "../actiontypes";
 import { refreshAccessToken } from "./signinform";
 import { updateStore } from "./store";
@@ -51,8 +51,8 @@ export const createAStore = (onSuccess, onFail) => {
       }
       const response = await axios.post(`${BASE_URL}/store`, formData, options);
       const res = response?.data;
-
       dispatch(updateStore({ ...res?.data?.store }));
+      setCookie("has_store", true, 1);
       swal("Store Created!", "", "success").then((res) => {
         dispatch(setReset("createstoreform"));
         onSuccess && onSuccess();
