@@ -122,7 +122,7 @@ function DashHome() {
               <XAxis dataKey="name" axisLine={false} tickLine={false} />
 
               {/* <YAxis /> */}
-              <CartesianGrid strokeDasharray="0.2" />
+              <CartesianGrid strokeDasharray="1" />
               <Tooltip
                 offset={5}
                 contentStyle={{
