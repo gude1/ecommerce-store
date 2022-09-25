@@ -93,6 +93,22 @@
 .dashboard-bottom-tab-btn {
   flex: 1;
   transition: transform 0.4s;
+  will-change: transform;
+}
+
+.dashboard-bottom-tab-btn-active {
+  flex: 1;
+  color: var(--blue) !important;
+  transition: transform 0.4s;
+  -webkit-transform: scale (1.1);
+  -moz-transform: scale (1.1);
+  -ms-transform: scale (1.1);
+  transform: scale(1.1);
+}
+
+.dashboard-bottom-tab-btn-active button,
+.dashboard-bottom-tab-btn-active span {
+  color: var(--blue) !important;
 }
 
 .dashboard-bottom-tab-btn:hover {

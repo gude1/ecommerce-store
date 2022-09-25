@@ -7,6 +7,7 @@ function IconButton({
   className,
   btnClassName,
   titleClassName,
+  titleStyle = {},
   onClick,
   title,
 }) {
@@ -20,7 +21,9 @@ function IconButton({
         {name}
       </button>
       {title && (
-        <span className={`icon-btn-txt ${titleClassName}`}>{title}</span>
+        <span className={`icon-btn-txt ${titleClassName}`} style={titleStyle}>
+          {title}
+        </span>
       )}
     </div>
   );

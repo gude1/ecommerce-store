@@ -192,6 +192,10 @@ function App() {
         </Route>
         <Route path="/dashboard" element={<DashboardWrapper />}>
           <Route index element={<DashHome />} />
+          <Route path="products" element={<div>Hello</div>} />
+          <Route path="orders" element={<div>Hello</div>} />
+          <Route path="customers" element={<div>Hello</div>} />
+          <Route path="settings" element={<div>Hello</div>} />
         </Route>
         <Route path="/:storeId" element={<Wrapper />}>
           <Route index element={<Home />} />

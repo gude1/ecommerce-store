@@ -13,6 +13,7 @@ import {
 import "../../App.css";
 import "./DashHome.css";
 import Panel from "../../components/Panel/Panel";
+import CustomTable from "../../components/CustomTable/CustomTable";
 
 function DashHome() {
   const staticgraphdata = [
@@ -45,6 +46,7 @@ function DashHome() {
       uv: 0,
     },
   ];
+
   return (
     <div>
       <SubHeader
@@ -163,26 +165,34 @@ function DashHome() {
         <div className="dashboard-orderdetails-ctn">
           <h3 className="">Recent Orders</h3>
           <div className="custom-table-wrapper">
-            <table className="custom-table">
-              <tr className="custom-table-header">
-                <th>Company</th>
-                <th>Contact</th>
-                <th>Country</th>
-                <th>Country</th>
-              </tr>
-              <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td>Germany</td>
-                <td>Germany</td>
-              </tr>
-              <tr>
-                <td>Centro comercial Moctezuma</td>
-                <td>Francisco Chang</td>
-                <td>Mexico</td>
-                <td>Germany</td>
-              </tr>
-            </table>
+            <CustomTable
+              headerData={[
+                "Customer Name",
+                "Customer Email",
+                "Amount Paid",
+                "Status",
+              ]}
+              bodyData={[
+                [
+                  "Owolabi Gideon Iyinoluwa",
+                  "owoblowgidslab@gmail.com",
+                  "$200",
+                  "pending",
+                ],
+                [
+                  "Owolabi Gideon Iyinoluwa",
+                  "owoblowgidslab@gmail.com",
+                  "$200",
+                  "pending",
+                ],
+                [
+                  "Owolabi Gideon Iyinoluwa",
+                  "owoblowgidslab@gmail.com",
+                  "$200",
+                  "pending",
+                ],
+              ]}
+            />
           </div>
         </div>
       </div>

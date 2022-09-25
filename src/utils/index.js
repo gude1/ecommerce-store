@@ -156,6 +156,15 @@ export async function copyText(txt, okAction, failedAction) {
   }
 }
 
+export const isPath = (data = "", exact = false) => {
+  let pathname = window.location.pathname;
+  if (!data) {
+    return false;
+  }
+  if (exact) return pathname == data;
+  else return pathname.indexOf(data) > -1 ? true : false;
+};
+
 export const goFullScreenMode = () => {
   if (
     (document.fullScreenElement && document.fullScreenElement !== null) ||

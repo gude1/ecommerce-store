@@ -1,0 +1,26 @@
+.custom-table {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-white);
+  border-radius: 8px;
+  overflow-y: hidden;
+  margin-top: 20px;
+  border-collapse: collapse;
+  text-indent: initial;
+  border-spacing: 2px;
+  text-align: left;
+}
+
+.custom-table-header {
+  background-color: rgb(226 232 240);
+  /* background-color: rgba(71, 100, 230, 0.8); */
+  color: rgb(107 114 128);
+  font-family: Sora-Bold;
+  font-weight: 800;
+}
+
+.custom-table td,
+.custom-table th {
+  padding: 20px;
+  font-size: 16px;
+}
