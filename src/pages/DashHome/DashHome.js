@@ -48,13 +48,13 @@ function DashHome() {
   ];
 
   return (
-    <div>
+    <div className="dash-ctn">
       <SubHeader
         title="Dashboard Overview"
         className="dashboard-subheader"
         titleClassName="dashboard-subheader-title"
       />
-      <div className="slideInUp dash-ctn">
+      <div className="slideInUp">
         <div className="dash-home-frist-section">
           <Panel icon="sell" className="dash-home-panel" title="Today Orders" />
           <Panel

@@ -27,6 +27,9 @@ import { Store } from "./context";
 import { logUserOut, refreshAccessToken } from "./context/actions/signinform";
 import { updateAdmin } from "./context/actions/admin";
 import DashProduct from "./pages/DashProduct/DashProduct";
+import DashOrder from "./pages/DashOrder/DashOrder";
+import DashCustomer from "./pages/DashCustomer/DashCustomer";
+import DashSetting from "./pages/DashSetting/DashSetting";
 
 function Wrapper() {
   return (
@@ -194,9 +197,9 @@ function App() {
         <Route path="/dashboard" element={<DashboardWrapper />}>
           <Route index element={<DashHome />} />
           <Route path="products" element={<DashProduct />} />
-          <Route path="orders" element={<div>Hello</div>} />
-          <Route path="customers" element={<div>Hello</div>} />
-          <Route path="settings" element={<div>Hello</div>} />
+          <Route path="orders" element={<DashOrder />} />
+          <Route path="customers" element={<DashCustomer />} />
+          <Route path="settings" element={<DashSetting />} />
         </Route>
         <Route path="/:storeId" element={<Wrapper />}>
           <Route index element={<Home />} />

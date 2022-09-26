@@ -5,7 +5,7 @@
   align-items: center;
   margin: 20px 0;
   height: 40px;
-  animation: slideInRight 1.5s;
+  animation: slideInRight 1s;
 }
 
 .productdesc-ctn > h3 {
