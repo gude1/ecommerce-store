@@ -26,6 +26,7 @@ import { Console, getCookie, isEmpty, listenCookieChange } from "./utils";
 import { Store } from "./context";
 import { logUserOut, refreshAccessToken } from "./context/actions/signinform";
 import { updateAdmin } from "./context/actions/admin";
+import DashProduct from "./pages/DashProduct/DashProduct";
 
 function Wrapper() {
   return (
@@ -192,7 +193,7 @@ function App() {
         </Route>
         <Route path="/dashboard" element={<DashboardWrapper />}>
           <Route index element={<DashHome />} />
-          <Route path="products" element={<div>Hello</div>} />
+          <Route path="products" element={<DashProduct />} />
           <Route path="orders" element={<div>Hello</div>} />
           <Route path="customers" element={<div>Hello</div>} />
           <Route path="settings" element={<div>Hello</div>} />

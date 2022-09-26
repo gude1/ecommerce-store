@@ -32,15 +32,6 @@
 }
 
 @media (max-width: 912px) {
-  .dash-ctn {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .dash-ctn > * {
-    width: 100%;
-  }
-
   .dash-home-panel {
     max-width: 500px;
     width: 100%;

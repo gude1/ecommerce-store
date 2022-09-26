@@ -50,6 +50,8 @@ function SideBar() {
           leftIconClass={"dashboard-sidebar-navbtn-icon"}
           title={"Products"}
           titleClass={"dashboard-sidebar-navbtn-title"}
+          titleStyle={isPath("/dashboard/products") ? selectedStyle : {}}
+          leftIconStyle={isPath("/dashboard/products") ? selectedStyle : {}}
         />
 
         <Button
