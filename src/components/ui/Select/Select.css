@@ -1,0 +1,89 @@
+.parentctn {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* border: 5px solid green; */
+  /* margin: 25px 15px; */
+}
+
+.showlistctn {
+  position: absolute;
+  border: 1px solid lightgrey;
+  /* border: 2px solid gold; */
+  z-index: -3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 95%;
+  width: 100%;
+  min-height: 48px;
+}
+
+.showlistctn > a {
+  font-family: Poppins-Light;
+}
+
+.material-textfield {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  width: 100%;
+  /* border: 5px solid red; */
+}
+.material-textfield > label {
+  position: absolute;
+  font-size: 1rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  color: gray;
+  padding: 0 0.3rem;
+  margin: 0 0.5rem;
+  transition: 0.1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+}
+
+.material-textfield > select {
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid rgba(138, 138, 160, 1);
+  outline: none;
+  /* border: 8px solid gray; */
+  border-radius: 5px;
+  height: 45px;
+  /* padding: 1rem 0.7rem; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  background: inherit;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: "#3e3e3e";
+  transition: 0.1s ease-out;
+}
+
+.material-textfield > select:hover {
+  border: 2px solid rgba(71, 100, 230, 1);
+  outline: 0;
+}
+
+.material-textfield > select:focus {
+  border: 1px solid rgba(71, 100, 230, 1);
+  outline: 2px solid rgba(248, 69, 252, 1);
+}
+
+.material-textfield > select:focus + label {
+  color: rgba(96, 93, 236, 1);
+  top: 0;
+  transform: translateY(-50%) scale(0.9) !important;
+}
+
+.material-textfield > select:not(:empty) + label {
+  top: 0;
+  transform: translateY(-50%) scale(0.9) !important;
+}

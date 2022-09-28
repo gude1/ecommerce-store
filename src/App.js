@@ -49,7 +49,7 @@ function DashboardWrapper() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    checkPath();
+    // checkPath();
   }, [location.pathname]);
 
   function checkPath() {
