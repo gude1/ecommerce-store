@@ -29,6 +29,10 @@
   display: none;
 }
 
+.dash-panel-input:not(:placeholder-shown) + label {
+  display: none;
+}
+
 .dash-panel-select-ctn {
   margin: 0px 16px;
   flex: 1;

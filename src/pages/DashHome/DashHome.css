@@ -27,10 +27,6 @@
   margin-top: 32px;
 }
 
-.custom-table-wrapper {
-  overflow-y: auto;
-}
-
 @media (max-width: 912px) {
   .dash-home-panel {
     max-width: 500px;

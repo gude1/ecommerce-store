@@ -157,7 +157,7 @@ function Redirect() {
 }
 
 function App() {
-  const { dispatch, state } = useContext(Store);
+  const { dispatch } = useContext(Store);
 
   useEffect(() => {
     setup();

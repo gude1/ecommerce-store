@@ -6,6 +6,7 @@ import "react-dropdown/style.css";
 import Input from "../../components/ui/Input/Input";
 import Select from "../../components/ui/Select/Select";
 import Button from "../../components/ui/Button/Button";
+import CustomTable from "../../components/CustomTable/CustomTable";
 
 function DashProduct() {
   return (
@@ -33,7 +34,7 @@ function DashProduct() {
           <Dropdown
             options={["Textile", "Cotton", "Wool", ""]}
             className="dash-panel-select-ctn"
-            placeholder="Textile"
+            placeholder="Category"
             controlClassName="dash-panel-select-control"
             placeholderClassName="dash-panel-select-placeholder"
             arrowOpen={
@@ -47,7 +48,41 @@ function DashProduct() {
               </span>
             }
           />
-          <Button className="dash-panel-actionbtn" title="Add product" />
+          <Button
+            className="dash-panel-actionbtn"
+            title="Add product"
+            leftIcon={"add"}
+          />
+        </div>
+        <div className="custom-table-wrapper">
+          <CustomTable
+            headerData={[
+              "Customer Name",
+              "Customer Email",
+              "Amount Paid",
+              "Status",
+            ]}
+            bodyData={[
+              [
+                "Owolabi Gideon Iyinoluwa",
+                "owoblowgidslab@gmail.com",
+                "$200",
+                "pending",
+              ],
+              [
+                "Owolabi Gideon Iyinoluwa",
+                "owoblowgidslab@gmail.com",
+                "$200",
+                "pending",
+              ],
+              [
+                "Owolabi Gideon Iyinoluwa",
+                "owoblowgidslab@gmail.com",
+                "$200",
+                "pending",
+              ],
+            ]}
+          />
         </div>
       </div>
     </div>
