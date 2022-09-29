@@ -1,0 +1,13 @@
+.addproductmodal {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.addproductmodalcontentCtn {
+  width: 95%;
+  max-width: 500px;
+  max-height: 500px;
+}

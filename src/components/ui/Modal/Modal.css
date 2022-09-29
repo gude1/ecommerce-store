@@ -20,7 +20,6 @@
   display: flex;
   min-height: 100px;
   min-width: 100px;
-  overflow-x: hidden;
   overflow-y: auto;
   margin-top: 20px;
   padding: 30px;
@@ -31,7 +30,6 @@
   animation: slideInUp 1s;
   -webkit-animation: slideInUp 1s;
   width: 50%;
-  border-radius: 20px;
 }
 
 .modal-form {
@@ -48,7 +46,6 @@
   background-color: inherit;
   padding-bottom: 12px;
   /* border: 0.1px solid #ddd; */
-  /* border-radius: 10px; */
 }
 
 .modal-ctnt-ctn::-webkit-scrollbar-thumb {
