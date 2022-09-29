@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DashProduct.css";
 import SubHeader from "../../components/SubHeader/SubHeader";
 import Dropdown from "react-dropdown";
@@ -10,6 +10,7 @@ import Modal from "../../components/ui/Modal/Modal";
 import CustomTable from "../../components/CustomTable/CustomTable";
 
 function DashProduct() {
+  const [showaddproductmodal, setShowAddProductModal] = useState(false);
   return (
     <div className="dash-ctn">
       <SubHeader
@@ -52,6 +53,9 @@ function DashProduct() {
           <Button
             className="dash-panel-actionbtn"
             title="Add product"
+            buttonProps={{
+              onClick: () => setShowAddProductModal(true),
+            }}
             leftIcon={"add"}
           />
         </div>
@@ -87,12 +91,16 @@ function DashProduct() {
         </div>
       </div>
       <Modal
-        show={true}
+        show={showaddproductmodal}
+        dismiss={() => setShowAddProductModal(false)}
         showdismissbtn
         ctnClassName={"addproductmodal"}
         contentCtnClassName="addproductmodalcontentCtn"
       >
-        <form style={{ display: "flex", flexDirection: "column" }}>
+        <form
+          style={{ display: "flex", flexDirection: "column" }}
+          onSubmit={(e) => e.preventDefault()}
+        >
           <Input
             placeholder={"Admin"}
             label={"Full Name"}
