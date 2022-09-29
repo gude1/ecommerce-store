@@ -4,8 +4,9 @@ import SubHeader from "../../components/SubHeader/SubHeader";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import Input from "../../components/ui/Input/Input";
-import Select from "../../components/ui/Select/Select";
 import Button from "../../components/ui/Button/Button";
+import Modal from "../../components/ui/Modal/Modal";
+
 import CustomTable from "../../components/CustomTable/CustomTable";
 
 function DashProduct() {
@@ -85,6 +86,87 @@ function DashProduct() {
           />
         </div>
       </div>
+      <Modal
+        show={true}
+        showdismissbtn
+        ctnClassName={""}
+        ctnStyle={{
+          display: "flex",
+          flexDirection: " column",
+          overflow: "hidden",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        contentCtnStyle={{
+          width: "95%",
+          maxWidth: "500px",
+          borderRadius: "5px",
+          maxHeight: "500px",
+        }}
+      >
+        <form style={{ display: "flex", flexDirection: "column" }}>
+          <Input
+            placeholder={"Admin"}
+            label={"Full Name"}
+            className="authform-inputctn"
+            labelClassName="authform-input-label"
+            inputProps={{
+              className: "authform-input",
+              minLength: 2,
+            }}
+          />
+          <Input
+            placeholder={"Admin"}
+            label={"Full Name"}
+            className="authform-inputctn"
+            labelClassName="authform-input-label"
+            inputProps={{
+              className: "authform-input",
+              minLength: 2,
+            }}
+          />
+          <Input
+            placeholder={"Admin"}
+            label={"Full Name"}
+            className="authform-inputctn"
+            labelClassName="authform-input-label"
+            inputProps={{
+              className: "authform-input",
+              minLength: 2,
+            }}
+          />
+          <Input
+            placeholder={"Admin"}
+            label={"Full Name"}
+            className="authform-inputctn"
+            labelClassName="authform-input-label"
+            inputProps={{
+              className: "authform-input",
+              minLength: 2,
+            }}
+          />
+          <Input
+            placeholder={"Admin"}
+            label={"Full Name"}
+            className="authform-inputctn"
+            labelClassName="authform-input-label"
+            inputProps={{
+              className: "authform-input",
+              minLength: 2,
+            }}
+          />
+          <Input
+            placeholder={"Admin"}
+            label={"Full Name"}
+            className="authform-inputctn"
+            labelClassName="authform-input-label"
+            inputProps={{
+              className: "authform-input",
+              minLength: 2,
+            }}
+          />
+        </form>
+      </Modal>
     </div>
   );
 }
