@@ -1,3 +1,42 @@
+.dashproduct-dropdown-ctn {
+  display: flex;
+  align-items: center;
+  margin: 0px 16px;
+  flex: 1;
+  /* border: 1px solid red; */
+  max-width: 200px;
+  justify-content: flex-start;
+}
+
+.dash-panel-select-ctn {
+  flex: 1;
+}
+
+.dash-panel-select-placeholder {
+  flex: 1;
+}
+
+.dash-panel-select-dropicon {
+  margin-left: 18px;
+  display: block;
+  margin-top: 2px;
+  height: 100%;
+  /* border: 1px solid                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  green; */
+}
+
+.dash-panel-select-control {
+  border: 1px solid var(--border-color) !important;
+  border-radius: 5px !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.dash-panel-select-control:hover {
+  border: 2px solid var(--blue) !important;
+}
+
 .addproductmodal {
   display: flex;
   flex-direction: column;
@@ -7,7 +46,30 @@
 }
 
 .addproductmodalcontentCtn {
-  width: 95%;
+  width: 90% !important;
+  overflow-x: hidden !important;
+  padding: 20px !important;
   max-width: 500px;
   max-height: 500px;
+}
+
+.addproductmodalForm {
+  margin-top: 15px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.addproductmodalTitle {
+  font-family: Sora-Bold;
+}
+
+@media (max-width: 639px) {
+  .dashproduct-dropdown-ctn {
+    width: 100%;
+  }
+  .dashproduct-dropdown-ctn {
+    max-width: 500px;
+    margin: 16px 8px;
+  }
 }

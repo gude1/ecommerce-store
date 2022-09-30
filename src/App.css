@@ -381,44 +381,11 @@ li {
   display: none;
 }
 
-.dash-panel-select-ctn {
-  margin: 0px 16px;
-  flex: 1;
-  max-width: 200px;
-}
-
-.dash-panel-select-placeholder {
-  flex: 1;
-}
-
-.dash-panel-select-dropicon {
-  margin-left: 18px;
-  display: block;
-  margin-top: 2px;
-  height: 100%;
-  /* border: 1px solid                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  green; */
-}
-
-.dash-panel-select-control {
-  border: 1px solid var(--border-color) !important;
-  border-radius: 8px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  /* border: 1px solid red; */
-}
-
-.dash-panel-select-control:hover {
-  border: 2px solid var(--blue) !important;
-}
-
 .dash-panel-actionbtn {
   width: auto;
   min-width: 150px;
   padding: 8px;
 }
-
-
 
 /* Animation classes */
 .slideInUp {
@@ -517,8 +484,7 @@ li {
     justify-content: flex-start;
   }
   
-  .dash-panel-input-ctn,
-  .dash-panel-select-ctn {
+  .dash-panel-input-ctn {
     width: 100%;
     max-width: 500px;
     margin: 16px 8px;

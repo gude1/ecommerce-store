@@ -5,6 +5,7 @@ import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import Input from "../../components/ui/Input/Input";
 import Button from "../../components/ui/Button/Button";
+import IconButton from "../../components/ui/IconButton/IconButton";
 import Modal from "../../components/ui/Modal/Modal";
 
 import CustomTable from "../../components/CustomTable/CustomTable";
@@ -32,24 +33,29 @@ function DashProduct() {
               required: true,
             }}
           />
-
-          <Dropdown
-            options={["Textile", "Cotton", "Wool", ""]}
-            className="dash-panel-select-ctn"
-            placeholder="Category"
-            controlClassName="dash-panel-select-control"
-            placeholderClassName="dash-panel-select-placeholder"
-            arrowOpen={
-              <span className="material-symbols-outlined dash-panel-select-dropicon">
-                arrow_drop_up
-              </span>
-            }
-            arrowClosed={
-              <span className="material-symbols-outlined dash-panel-select-dropicon">
-                arrow_drop_down
-              </span>
-            }
-          />
+          <div className="dashproduct-dropdown-ctn">
+            <Dropdown
+              options={["Textile", "Cotton", "Wool", ""]}
+              className="dash-panel-select-ctn"
+              placeholder="Category"
+              controlClassName="dash-panel-select-control"
+              placeholderClassName="dash-panel-select-placeholder"
+              arrowOpen={
+                <span className="material-symbols-outlined dash-panel-select-dropicon">
+                  arrow_drop_up
+                </span>
+              }
+              arrowClosed={
+                <span className="material-symbols-outlined dash-panel-select-dropicon">
+                  arrow_drop_down
+                </span>
+              }
+            />
+            <IconButton
+              name={"add_box"}
+              style={{ marginLeft: "8px", fontSize: "30px" }}
+            />
+          </div>
           <Button
             className="dash-panel-actionbtn"
             title="Add product"
@@ -97,8 +103,10 @@ function DashProduct() {
         ctnClassName={"addproductmodal"}
         contentCtnClassName="addproductmodalcontentCtn"
       >
+        <span className="addproductmodalTitle">Add Product</span>
+
         <form
-          style={{ display: "flex", flexDirection: "column" }}
+          className="addproductmodalForm"
           onSubmit={(e) => e.preventDefault()}
         >
           <Input
