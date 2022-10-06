@@ -102,7 +102,7 @@ function DashProduct() {
       <Modal
         show={showaddproductcatmodal}
         dismiss={() => setShowAddProductCatModal(false)}
-        dismissBtnStyle={{ margin: "30px 0" }}
+        dismissBtnStyle={{ marginTop: "100px", marginBottom: "30px" }}
         showdismissbtn
         ctnStyle={{ justifyContent: "flex-start" }}
         contentCtnClassName="addproductcatmodalcontentCtn"
@@ -113,7 +113,7 @@ function DashProduct() {
           onSubmit={(e) => e.preventDefault()}
         >
           <Input
-            placeholder={"Type in the category name"}
+            placeholder={"ype in the category name"}
             label={"Catgory Name"}
             className="authform-inputctn"
             labelClassName="authform-input-label"
