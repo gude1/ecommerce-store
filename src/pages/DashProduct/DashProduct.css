@@ -53,6 +53,20 @@
   max-height: 500px;
 }
 
+.addproductcatmodalcontentCtn {
+  width: 90% !important;
+  overflow-x: hidden !important;
+  padding: 20px !important;
+  max-width: 300px;
+  max-height: 500px;
+}
+
+.addproductcatbtn {
+  width: 110px;
+  padding: 8px;
+  align-self: center;
+}
+
 .addproductmodalForm {
   margin-top: 15px;
 
