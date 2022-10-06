@@ -12,11 +12,10 @@ function IconButton({
   title,
 }) {
   return (
-    <div className={`icon-btn-ctn ${className}`}>
+    <div className={`icon-btn-ctn ${className}`} onClick={onClick}>
       <button
         className={`material-symbols-outlined icon-btn ${btnClassName}`}
         style={style}
-        onClick={onClick}
       >
         {name}
       </button>
