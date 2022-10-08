@@ -1,0 +1,39 @@
+.tab-ctn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.tab-btn {
+  outline: none;
+  display: flex;
+  justify-content: center;
+  font-family: Sora-Medium;
+  padding: 0 8px;
+  color: var(--text-gray);
+  align-items: center;
+  transition: 0.3s all;
+  background-color: transparent;
+  cursor: pointer;
+  height: 40px;
+  border: none;
+}
+
+.tab-btn:not(:first-of-type) {
+  margin-left: 30px;
+}
+
+.tab-btn:hover {
+  font-family: Sora-Bold;
+  transform: scale(1.1);
+  color: var(--black);
+}
+
+.tab-btn-active {
+  transition: 0.3s all;
+  font-family: Sora-Bold;
+  color: var(--black);
+  transform: scale(1.1);
+  border-bottom: 2.3px solid var(--blue);
+}
