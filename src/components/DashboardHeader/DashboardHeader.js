@@ -1,11 +1,23 @@
 import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import IconButton from "../ui/IconButton/IconButton";
 import "./DashboardHeader.css";
 
 function DashboardHeader() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   return (
     <nav className="dashboard-header-ctn">
       <div className="dashboard-header-logo-ctn">
+        {location?.state?.goback && (
+          <IconButton
+            name={"west"}
+            className="arrow-nav-btn"
+            style={{ fontWeight: "bold", marginRight: "16px" }}
+            onClick={() => navigate(-1)}
+          />
+        )}
         <img
           className="dashboard-header-logo"
           // https://cdn.looka.com/images/logos/looka_logo_black.svg

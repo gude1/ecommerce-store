@@ -392,21 +392,21 @@ li {
 
 /* Animation classes */
 .slideInUp {
-  animation: slideInUp 1s;
+  animation: slideInUp 1.2s;
   will-change: scroll-position;
-  -webkit-animation: slideInUp 1s;
+  -webkit-animation: slideInUp 1.2s;
 }
 
 .slideInDown {
-  animation: slideInDown 1s;
+  animation: slideInDown 1.2s;
   will-change: scroll-position;
-  -webkit-animation: slideInDown 1s;
+  -webkit-animation: slideInDown 1.2s;
 }
 
 .slideInLeft {
-  animation: slideInleft 1s;
+  animation: slideInleft 1.2s;
   will-change: scroll-position;
-  -webkit-animation: slideInleft 1s;
+  -webkit-animation: slideInleft 1.2s;
 }
 
 .slideInRight {

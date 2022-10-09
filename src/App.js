@@ -24,7 +24,7 @@ import { useContext, useEffect } from "react";
 import jwtDecode from "jwt-decode";
 import { Console, getCookie, isEmpty, listenCookieChange } from "./utils";
 import { Store } from "./context";
-import { logUserOut, refreshAccessToken } from "./context/actions/signinform";
+import { logUserOut } from "./context/actions/signinform";
 import { updateAdmin } from "./context/actions/admin";
 import DashProduct from "./pages/DashProduct/DashProduct";
 import DashOrder from "./pages/DashOrder/DashOrder";

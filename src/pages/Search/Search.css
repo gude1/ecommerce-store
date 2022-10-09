@@ -60,6 +60,9 @@
 }
 
 .searchinput-btn:hover {
-  color: var(--bg-white);
   background-color: var(--blue);
+}
+
+.searchinput-btn:hover button {
+  color: var(--white);
 }

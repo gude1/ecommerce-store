@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./DashSetting.css";
 import SubHeader from "../../components/SubHeader/SubHeader";
 import Button from "../../components/ui/Button/Button";
@@ -6,6 +6,14 @@ import Input from "../../components/ui/Input/Input";
 import Tab from "../../components/ui/Tab/Tab";
 
 function DashSetting() {
+  const ismobile = window.innerHeight >= 912;
+  useEffect(() => {
+    let bottomTab = document.getElementsByClassName("dashboard-bottom-tab")[0];
+    if (ismobile) {
+      bottomTab.style.display = "none";
+    }
+  }, []);
+
   return (
     <div className="dash-ctn">
       <SubHeader
