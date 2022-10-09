@@ -16,8 +16,35 @@ function DashSetting() {
       <Tab tabs={[{ name: "User Info" }, { name: "Payment & Billing Info" }]} />
       <div className="slideInUp">
         <div className="settings-test">
-          <Input />
-          <Input />
+          <div>
+            <Input
+              className="authform-inputctn"
+              label="Name"
+              labelClassName="authform-input-label settings-input-label"
+              inputProps={{
+                className: "authform-input settings-input",
+              }}
+            />
+          </div>
+          <div>
+            <Input
+              className="authform-inputctn"
+              label="Email"
+              labelClassName="authform-input-label settings-input-label"
+              inputProps={{
+                className: "authform-input settings-input",
+              }}
+            />
+          </div>
+          <div>
+            <Input
+              className="authform-inputctn"
+              labelClassName="authform-input-label settings-input-label"
+              inputProps={{
+                className: "authform-input settings-input",
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -37,7 +37,7 @@
   /* --bg-color: #f9fafb; */
   /* --bg-color: rgb(245, 248, 252); */
   --bg-color: rgb(241 245 249);
-  --z-low:10,
+  --z-low: 10;
   --opaque: hsla(0, 0%, 96.5%, 0.6);
   --bg-white: #fff;
   --white: #fff;
@@ -52,7 +52,7 @@
   --light-gray: #d5d6d7;
   --bg-gray: #f1f3f4;
   --input-bg: rgb(243 244 246);
-  --border-color:rgb(229 231 235);
+  --border-color: rgb(229 231 235);
   height: 100%;
 }
 
@@ -329,7 +329,8 @@ li {
   overflow-y: auto;
 }
 
-.scroll-vertical::-webkit-scrollbar, .dashboard-scroll-ctn::-webkit-scrollbar {
+.scroll-vertical::-webkit-scrollbar,
+.dashboard-scroll-ctn::-webkit-scrollbar {
   display: block;
   cursor: all-scroll;
   width: 16px;
@@ -339,8 +340,9 @@ li {
   /* border-radius: 10px; */
 }
 
-.scroll-vertical::-webkit-scrollbar-thumb,.dashboard-scroll-ctn::-webkit-scrollbar-thumb {
-  background:#d1d5db;
+.scroll-vertical::-webkit-scrollbar-thumb,
+.dashboard-scroll-ctn::-webkit-scrollbar-thumb {
+  background: #d1d5db;
   border: 2px solid rgba(0, 0, 0, 0);
   cursor: all-scroll;
   background-clip: padding-box;
@@ -359,7 +361,7 @@ li {
 
 .dash-panel-input-ctn {
   flex: 1;
-  max-width:300px;
+  max-width: 300px;
   margin: 0px 16px;
 }
 
@@ -484,7 +486,7 @@ li {
     flex-direction: column;
     justify-content: flex-start;
   }
-  
+
   .dash-panel-input-ctn {
     width: 100%;
     max-width: 500px;
