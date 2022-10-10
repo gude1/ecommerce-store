@@ -6,7 +6,7 @@ import Input from "../../components/ui/Input/Input";
 import Tab from "../../components/ui/Tab/Tab";
 
 function DashSetting() {
-  const ismobile = window.innerHeight >= 912;
+  const ismobile = window.innerWidth <= 912;
   useEffect(() => {
     let bottomTab = document.getElementsByClassName("dashboard-bottom-tab")[0];
     if (ismobile) {

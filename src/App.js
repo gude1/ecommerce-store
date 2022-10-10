@@ -69,8 +69,8 @@ function DashboardWrapper() {
 
   return (
     <div className="cover_page_container">
-      <DashboardHeader />
       <NavTab />
+      <DashboardHeader />
       <main className="dashboard-scroll-ctn">
         <div className="dashboard-container">
           <Outlet />

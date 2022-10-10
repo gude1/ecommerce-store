@@ -1,11 +1,13 @@
 .dashboard-header-ctn {
   display: flex;
   align-items: center;
+  position: fixed;
   /* border: 2px solid black; */
   /* justify-content: space-between; */
   background-color: var(--bg-white);
   width: 100%;
   min-height: 70px;
+  z-index: 10;
   /* box-shadow: 1px 5px 24px 0 rgb(68 102 242 / 5%); */
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
   padding: 0px 24px;
