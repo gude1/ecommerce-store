@@ -4,8 +4,10 @@ import Button from "../../components/ui/Button/Button";
 import Input from "../../components/ui/Input/Input";
 import CustomTable from "../../components/CustomTable/CustomTable";
 import SubHeader from "../../components/SubHeader/SubHeader";
+import { useNavigate } from "react-router-dom";
 
 function DashCustomer() {
+  const navigate = useNavigate();
   return (
     <div className="dash-ctn">
       <SubHeader
@@ -30,7 +32,11 @@ function DashCustomer() {
           <Button
             className="dash-panel-actionbtn"
             title="Download Customers Csv"
-            buttonProps={{}}
+            buttonProps={{
+              onClick: () => {
+                navigate("/dashboard/settings", { state: { goback: true } });
+              },
+            }}
             style={{ padding: "14px" }}
           />
         </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import "./DashSetting.css";
 import SubHeader from "../../components/SubHeader/SubHeader";
 import Button from "../../components/ui/Button/Button";
@@ -7,11 +7,14 @@ import Tab from "../../components/ui/Tab/Tab";
 
 function DashSetting() {
   const ismobile = window.innerWidth <= 912;
-  useEffect(() => {
+  useLayoutEffect(() => {
     let bottomTab = document.getElementsByClassName("dashboard-bottom-tab")[0];
     if (ismobile) {
       bottomTab.style.display = "none";
     }
+    return () => {
+      bottomTab.style.display = "flex";
+    };
   }, []);
 
   return (
