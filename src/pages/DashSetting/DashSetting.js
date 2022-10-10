@@ -13,7 +13,7 @@ function DashSetting() {
       bottomTab.style.display = "none";
     }
     return () => {
-      bottomTab.style.display = "flex";
+      if (ismobile) bottomTab.style.display = "flex";
     };
   }, []);
 

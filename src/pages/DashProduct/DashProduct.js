@@ -174,6 +174,7 @@ function DashProduct() {
               style={{ marginLeft: "8px", fontSize: "30px" }}
             />
           </div>
+
           <Button
             className="dash-panel-actionbtn"
             title="Add product"
@@ -183,6 +184,7 @@ function DashProduct() {
             leftIcon={"add"}
           />
         </div>
+
         <div className="custom-table-wrapper">
           <CustomTable
             headerData={[
@@ -213,9 +215,9 @@ function DashProduct() {
             ]}
           />
         </div>
+        {renderAddProductModal()}
+        {renderAddProductCatModal()}
       </div>
-      {renderAddProductModal()}
-      {renderAddProductCatModal()}
     </div>
   );
 }
