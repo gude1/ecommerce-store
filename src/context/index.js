@@ -2,6 +2,8 @@ import React from "react";
 import { combineReducers } from "../utils";
 import AdminReducer from "./reducers/AdminReducer";
 import CreateStoreReducer from "./reducers/CreateStoreReducer";
+import OrderReducer from "./reducers/OrderReducer";
+import ProductReducer from "./reducers/ProductReducer";
 import SigninReducer from "./reducers/SigninReducer";
 import SignupReducer from "./reducers/SignupReducer";
 import StoreReducer from "./reducers/StoreReducer";
@@ -14,6 +16,8 @@ export const initialState = {
   signinform: SigninReducer.INITIAL_STATE,
   createstoreform: CreateStoreReducer.INITIAL_STATE,
   store: StoreReducer.INITIAL_STATE,
+  order: OrderReducer.INITIAL_STATE,
+  product: ProductReducer.INITIAL_STATE,
 };
 
 export function StoreProvider(props) {
@@ -32,6 +36,11 @@ export function StoreProvider(props) {
       CreateStoreReducer.INITIAL_STATE
     ),
     store: React.useReducer(StoreReducer.reducer, StoreReducer.INITIAL_STATE),
+    order: React.useReducer(OrderReducer.reducer, OrderReducer.INITIAL_STATE),
+    product: React.useReducer(
+      ProductReducer.reducer,
+      ProductReducer.INITIAL_STATE
+    ),
   });
 
   return (
