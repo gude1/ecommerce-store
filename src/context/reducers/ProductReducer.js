@@ -1,4 +1,4 @@
-import { isEmpty } from "../../utils";
+import { isEmpty, sortByCreatedAt } from "../../utils";
 import {
   RESET,
   PROCESSING,
@@ -41,7 +41,8 @@ const reducer = (state, action) => {
         }
         return productitem;
       });
-      reducerdata = [...reducerdata, ...newproducts];
+      reducerdata = sortByCreatedAt([...reducerdata, ...newproducts]);
+      return { ...state, list: reducerdata };
     case RESET:
       return action.payload == "productreducer" ? INITIAL_STATE : state;
     case PROCESSING:

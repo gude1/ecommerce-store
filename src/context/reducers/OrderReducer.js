@@ -1,5 +1,11 @@
 import { isEmpty } from "../../utils";
-import { RESET, PROCESSING, LOG_OUT } from "../actiontypes";
+import {
+  RESET,
+  PROCESSING,
+  LOG_OUT,
+  SET_ORDERS,
+  UPDATE_ORDERS,
+} from "../actiontypes";
 
 const INITIAL_STATE = {
   list: [],
@@ -19,7 +25,22 @@ const handleProcessing = (key, value, state) => {
 };
 
 const reducer = (state, action) => {
+  let reducerdata = null;
   switch (action.type) {
+    case SET_ORDERS:
+      return { ...state, list: action.payload };
+    case UPDATE_ORDERS:
+      let neworders = action.payload;
+      reducerdata = state.list.map((orderitem) => {
+        let index = neworders.findIndex((item) => item?._id == orderitem?._id);
+        if (index > -1) {
+          neworders.splice(index, 1);
+          return { ...orderitem, ...neworders[index] };
+        }
+        return orderitem;
+      });
+      reducerdata = sortByCreatedAt([...reducerdata, ...neworders]);
+      return { ...state, list: reducerdata };
     case RESET:
       return action.payload == "productreducer" ? INITIAL_STATE : state;
     case PROCESSING:
