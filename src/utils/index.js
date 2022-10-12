@@ -189,3 +189,14 @@ export const goFullScreenMode = () => {
     }
   }
 };
+
+export const sortByCreatedAt = (data = [], type = 0) => {
+  if (!Array.isArray(data) || data.length < 1) {
+    return [];
+  }
+  return data.sort((item1, item2) => {
+    return type == 0
+      ? item1?.createdAt - item2?.createdAt
+      : item2?.createdAt - item1?.createdAt;
+  });
+};

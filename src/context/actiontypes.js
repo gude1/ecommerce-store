@@ -32,3 +32,15 @@ export const UPDATE_ADMIN = "update_admin";
  * STORE REDUCER
  */
 export const UPDATE_STORE = "update_store";
+
+/**
+ * ORDER REDUCER
+ */
+export const SET_ORDERS = "set_orders";
+export const UPDATE_ORDERS = "update_orders";
+
+/**
+ * PRODUCT REDUCER
+ */
+export const SET_PRODUCTS = "set_products";
+export const UPDATE_PRODUCTS = "update_products";
