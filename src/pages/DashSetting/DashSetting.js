@@ -21,8 +21,11 @@ function DashSetting() {
 
   const renderUserInfoInputs = () => {
     return (
-      <form style={{ border: "2px solid red" }}>
-        <div className="settings-test" style={{ border: "2px solid green" }}>
+      <form
+        className="dash-settings-form slideInUp"
+        onSubmit={(e) => e.preventDefault()}
+      >
+        <div className="settings-test">
           <div>
             <Input
               className="authform-inputctn"
@@ -55,35 +58,48 @@ function DashSetting() {
           </div>
         </div>
 
-        <span className="authform-errtxt">sgsgsgsg</span>
-        <Button title="Create Account" />
+        {/* <span className="authform-errtxt"></span> */}
+        <Button
+          title="Update"
+          style={{ minWidth: "120px", padding: "10px", width: "auto" }}
+        />
       </form>
     );
   };
 
   const renderPaymentInputs = () => {
     return (
-      <form className="settings-test">
-        <div>
-          <Input
-            className="authform-inputctn"
-            label="PayStack "
-            labelClassName="authform-input-label settings-input-label"
-            inputProps={{
-              className: "authform-input settings-input",
-            }}
-          />
+      <form
+        className="dash-settings-form slideInUp"
+        onSubmit={(e) => e.preventDefault()}
+      >
+        <div className="settings-test">
+          <div>
+            <Input
+              className="authform-inputctn"
+              label="PayStack "
+              labelClassName="authform-input-label settings-input-label"
+              inputProps={{
+                className: "authform-input settings-input",
+              }}
+            />
+          </div>
+          <div>
+            <Input
+              className="authform-inputctn"
+              label="Email"
+              labelClassName="authform-input-label settings-input-label"
+              inputProps={{
+                className: "authform-input settings-input",
+              }}
+            />
+          </div>
         </div>
-        <div>
-          <Input
-            className="authform-inputctn"
-            label="Email"
-            labelClassName="authform-input-label settings-input-label"
-            inputProps={{
-              className: "authform-input settings-input",
-            }}
-          />
-        </div>
+        {/* <span className="authform-errtxt">sgsgsgsg</span> */}
+        <Button
+          title="Update"
+          style={{ minWidth: "120px", padding: "10px", width: "auto" }}
+        />
       </form>
     );
   };

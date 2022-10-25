@@ -1,5 +1,13 @@
+.dash-settings-form {
+  align-items: center;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
 .settings-test {
   display: grid;
+  width: 100%;
   margin-top: 10px;
   grid-template-columns: repeat(2, minmax(auto, 300px));
   column-gap: 15px;
