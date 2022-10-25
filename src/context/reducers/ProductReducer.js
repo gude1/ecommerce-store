@@ -10,6 +10,8 @@ import {
 const INITIAL_STATE = {
   list: [],
   fetching: false,
+  prev: null,
+  next: null,
 };
 
 const handleProcessing = (key, value, state) => {

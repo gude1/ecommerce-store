@@ -38,9 +38,11 @@ export const UPDATE_STORE = "update_store";
  */
 export const SET_ORDERS = "set_orders";
 export const UPDATE_ORDERS = "update_orders";
+export const SET_ORDERS_URL = "set_orders_url";
 
 /**
  * PRODUCT REDUCER
  */
 export const SET_PRODUCTS = "set_products";
 export const UPDATE_PRODUCTS = "update_products";
+export const SET_PRODUCTS_URL = "set_products_url";
