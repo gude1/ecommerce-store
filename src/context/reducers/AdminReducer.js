@@ -1,13 +1,18 @@
 import { isEmpty } from "../../utils";
 import { RESET, PROCESSING, LOG_OUT, UPDATE_ADMIN } from "../actiontypes";
 
-const INITIAL_STATE = {};
+const INITIAL_STATE = {
+  admin: {},
+  fetching: false,
+};
 
 const handleProcessing = (key, value, state) => {
   if (isEmpty(key) || isEmpty(state) || isEmpty(value)) {
     return state;
   }
   switch (key) {
+    case "adminprocessing":
+      return { ...state, fetching: value };
     default:
       return state;
   }
@@ -16,7 +21,7 @@ const handleProcessing = (key, value, state) => {
 const reducer = (state, action) => {
   switch (action.type) {
     case UPDATE_ADMIN:
-      return { ...state, ...action.payload };
+      return { ...state, admin: { ...state.admin, ...action.payload } };
     case RESET:
       return action.payload == "adminreducer" ? INITIAL_STATE : state;
     case PROCESSING:

@@ -30,6 +30,7 @@ import DashProduct from "./pages/DashProduct/DashProduct";
 import DashOrder from "./pages/DashOrder/DashOrder";
 import DashCustomer from "./pages/DashCustomer/DashCustomer";
 import DashSetting from "./pages/DashSetting/DashSetting";
+import BinarySearchTree from "./utils/datastructures";
 
 function Wrapper() {
   return (
@@ -161,13 +162,6 @@ function App() {
 
   useEffect(() => {
     setup();
-    listenCookieChange(() => {
-      let access = getCookie("id1");
-      if (!isEmpty(access)) {
-        let decoded = jwtDecode(access);
-        updateAdmin({ ...decoded });
-      }
-    }, ["id1"]);
   }, []);
 
   function setup() {

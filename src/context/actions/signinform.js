@@ -103,6 +103,7 @@ export const logUserOut = () => {
     try {
       deleteCookie("id1");
       deleteCookie("id2");
+      deleteCookie("has_store");
       dispatch(logOut());
     } catch (err) {
       Console.warn(`logUserOut`, String(err));

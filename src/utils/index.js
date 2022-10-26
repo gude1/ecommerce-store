@@ -98,8 +98,6 @@ export function listenCookieChange(callback, keys = [], interval = 1000) {
           keys.forEach((key) => {
             let olddata = getCookie(`${key}`, lastCookie || "coookie");
             let currentdata = getCookie(`${key}`);
-            // console.warn("olddata", olddata);
-            // console.warn("newdata", currentdata);
             if (olddata != currentdata) {
               returnobj[`${key}`] = { old: olddata, new: currentdata };
             }
@@ -110,7 +108,6 @@ export function listenCookieChange(callback, keys = [], interval = 1000) {
         }
         if (!haskeys) callback({ oldValue: lastCookie, newValue: cookie });
       } finally {
-        console.warn("here");
         lastCookie = cookie;
       }
     }

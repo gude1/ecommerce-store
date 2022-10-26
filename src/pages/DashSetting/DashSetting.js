@@ -117,7 +117,6 @@ function DashSetting() {
             { name: "User Info", onClick: () => setTabIndex(0) },
             { name: "Payment & Billing Info", onClick: () => setTabIndex(1) },
           ]}
-          ta
         />
         {tabindex == 0 && renderUserInfoInputs()}
         {tabindex == 1 && renderPaymentInputs()}

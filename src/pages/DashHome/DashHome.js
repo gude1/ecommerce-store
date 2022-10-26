@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import SubHeader from "../../components/SubHeader/SubHeader";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
@@ -14,8 +14,12 @@ import "../../App.css";
 import "./DashHome.css";
 import Panel from "../../components/Panel/Panel";
 import CustomTable from "../../components/CustomTable/CustomTable";
+import { Store } from "../../context";
+import { fetchAdmin } from "../../context/actions/admin";
 
 function DashHome() {
+  const { dispatch, state } = useContext(Store);
+
   const staticgraphdata = [
     {
       name: "SUN",
@@ -46,6 +50,10 @@ function DashHome() {
       uv: 0,
     },
   ];
+
+  useEffect(() => {
+    dispatch(fetchAdmin());
+  }, []);
 
   return (
     <div className="dash-ctn">
